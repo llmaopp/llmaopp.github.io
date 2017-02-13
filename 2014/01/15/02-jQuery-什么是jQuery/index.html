@@ -116,7 +116,7 @@ jQuery的优势
 方便的选择页面元素
 动态更改页面样式
 控制">
-<meta property="og:updated_time" content="2017-02-12T13:14:26.000Z">
+<meta property="og:updated_time" content="2017-02-13T03:19:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery-总结">
 <meta name="twitter:description" content="jQuery 总结
@@ -450,13 +450,58 @@ jQuery的优势
 </li>
 </ul>
 <h3 id="jQuery-动画"><a href="#jQuery-动画" class="headerlink" title="jQuery 动画"></a>jQuery 动画</h3><ul>
-<li>显示和隐藏</li>
-<li>滑入和滑出</li>
-<li>淡入和淡出</li>
-<li>自定义动画</li>
-<li>停止动画</li>
+<li>显示和隐藏 (改变宽高和不透明度)<ul>
+<li>show( speed,callback): 显示<br>  speed:表示动画运行多久(slow=0.6/normal=0.4/fast=0.2)<br>  callback:表示动画结束后立即执行的函数</li>
+<li>hide( speed,callback): 隐藏</li>
+<li>toggle( speed,callback): 切换</li>
 </ul>
-<h3 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h3><h3 id="jQuery-Ajax"><a href="#jQuery-Ajax" class="headerlink" title="jQuery Ajax"></a>jQuery Ajax</h3>
+</li>
+<li>滑入和滑出 (改变高度)<ul>
+<li>slideDown( speed,callback): 向下滑出</li>
+<li>slideUp( speed,callback): 向上滑入</li>
+<li>slideToggle( speed,callback): 切换</li>
+</ul>
+</li>
+<li>淡入和淡出 (改变不透明度)<ul>
+<li>fideOut( speed,callback): 淡出</li>
+<li>fideIn( speed,callback): 淡入</li>
+<li>fadeToggle( speed,callback): 切换</li>
+<li>fadeTo( speed, opacity, callback): 淡到什么程度</li>
+</ul>
+</li>
+<li>自定义动画<ul>
+<li>animate(json, speed, callback)<br>  json: 要执行动画的 css 属性,必选<br>  speed: 执行动画时长,可选<br>  callback: 动画结束后立即执行的函数</li>
+</ul>
+</li>
+<li>停止动画<ul>
+<li>stop(boolean1, boolean2)<br>  boolean1: true表示后续动画停止, false表示后续动画不停止<br>  boolear2: true表示当前动画立即执行完毕, false表示当前动画不执行完毕</li>
+</ul>
+</li>
+</ul>
+<h3 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h3><ul>
+<li>事件对象 event<ul>
+<li>event.data: 获取传递给事件处理程序的额外数据</li>
+<li>event.type: 获取事件类型</li>
+<li>event.target: 获取触发事件的元素,不一定 === this</li>
+<li>event.currentTarget: 等同于 this</li>
+<li>event.preventDefault(): 阻止事件默认行为</li>
+<li>event.stopPropagation(): 阻止事件冒泡</li>
+<li>event.keyCode: 针对于 keypress 事件,获取键盘键的数字</li>
+<li>event.which: 针对于鼠标单击事件中,获取鼠标的左 中  右键</li>
+<li>event.pageX / event.pageY: 获取光标相对于页面的 x 坐标和 y 坐标</li>
+<li>event.clientX / event.clientY: 获取光标对于浏览器窗口的水平和垂直坐标</li>
+<li>event.screenX / event.screenY: 获取光标对于电脑屏幕的水平和垂直坐标</li>
+</ul>
+</li>
+<li>事件绑定<ul>
+<li>直接绑定<br>  以 click 事件为例: <code>$(&quot;div&quot;).click(callback)</code></li>
+<li>bind():<br>  为每个匹配的元素绑定一个或多个的事件,只适用于当前的元素<br>  $(selector).bind(event, data(可选), callback)<br>  <code>$(&quot;div&quot;).bind(&quot;click mouseenter&quot;, callback)</code></li>
+<li>delegate():<br>  为指定元素添加一个或多个事件,适用于当前和未来的元素<br>  $(selector).delegate(childSelector, event, data(可选), callback)<br>  <code>$(&quot;ul&quot;).delegate($(&quot;li&quot;), &quot;click mouseenter&quot;, {&quot;name&quot;:&quot;张三&quot;}, callback)</code></li>
+<li>on(): 当前常用<br>  为指定元素添加一个或多个事件,适用于当前和未来的元素<br>  $(selector).on(event, childSelector(可选), data(可选), callback)<br>  <code>$(&quot;div&quot;).on(&quot;click mouseenter&quot;, callback)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="jQuery-Ajax"><a href="#jQuery-Ajax" class="headerlink" title="jQuery Ajax"></a>jQuery Ajax</h3>
       
     </div>
 
