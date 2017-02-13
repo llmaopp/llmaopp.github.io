@@ -116,7 +116,7 @@ jQuery的优势
 方便的选择页面元素
 动态更改页面样式
 控制">
-<meta property="og:updated_time" content="2017-02-13T03:19:29.000Z">
+<meta property="og:updated_time" content="2017-02-13T07:19:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery-总结">
 <meta name="twitter:description" content="jQuery 总结
@@ -501,7 +501,39 @@ jQuery的优势
 </ul>
 </li>
 </ul>
-<h3 id="jQuery-Ajax"><a href="#jQuery-Ajax" class="headerlink" title="jQuery Ajax"></a>jQuery Ajax</h3>
+<h3 id="jQuery-Ajax"><a href="#jQuery-Ajax" class="headerlink" title="jQuery Ajax"></a>jQuery Ajax</h3><ul>
+<li><p>$.ajax(configObj)<br>  这是一个 jQuery对 ajax 封装的最基础步,通过这个函数可以完成异步通讯的所有功能.</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">"get"</span> || <span class="string">"post"</span>, <span class="comment">//数据提交的方式</span></div><div class="line">    url: <span class="string">"https://github.com/llmaopp/llmaopp.github.io"</span>, <span class="comment">//数据提交的路径</span></div><div class="line">    <span class="keyword">async</span>: <span class="literal">true</span>, <span class="comment">//是否支持异步刷新,默认为 true</span></div><div class="line">    data: &#123; <span class="attr">name</span>: <span class="string">"tom"</span>&#125;, <span class="comment">//需要提交的数据</span></div><div class="line">    dataType: <span class="string">"Json"</span>, <span class="comment">//服务器返回数据的类型</span></div><div class="line">    success: <span class="comment">//请求成功的回调函数</span></div><div class="line">    error: <span class="comment">//请求失败的回调函数</span></div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>$.post(configObj)<br>  这是对 $.ajax 的进一步封装,减少了参数,简化了操作,但是运用范围更小了.只能采用 post 方式提交,只能异步访问服务器,不能进行错误处理.</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.post(&#123;</div><div class="line">    <span class="attr">url</span>: <span class="string">"请求发送的地址"</span>,</div><div class="line">    <span class="attr">data</span>: &#123; <span class="attr">name</span>: <span class="string">"libai"</span>&#125;,</div><div class="line">    <span class="attr">callback</span>: , <span class="comment">//发送成功是的回调函数</span></div><div class="line">    type: <span class="string">"json"</span>, <span class="comment">//返回的内容样式</span></div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>$.get(configObj)<br>  它和 $.post一样,这个函数是对 get 方法的提交数据进行封装,只能使用在 get 提交提交数据解决异步刷新的方式上.使用方式跟 $.post 一样</p>
+</li>
+<li>$.getJSON(configObj)<br>  这个是进一步的封装,也就是对返回数据类型为 json 进行操作<br>  他有三个参数: url, data, callback.</li>
+</ul>
+<h3 id="jQuery-插件"><a href="#jQuery-插件" class="headerlink" title="jQuery 插件"></a>jQuery 插件</h3><ul>
+<li>使用<br>  jQuery 支持多种功能的插件扩展<br>  需要在 jQuery 的引用的后面进行插件的引用<br>  然后再写插件实现功能的 js 代码即可</li>
+<li>插件推荐<br>  <a href="http://www.jq22.com/" target="_blank" rel="external">jQuery插件库</a><ul>
+<li>jQuery Grid<br>  jQuery Grid 能够在 ASP.NET MVC 中轻松地实现分页、 排序、 筛选以及 jQuery 插件网格中的 CRUD 操作.</li>
+<li>jQuery Plot<br>  这是一个图标绘制插件<br>  <code>$.plot($(&quot;#placeholder&quot;), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } })</code></li>
+<li>jPages<br>  这是一个客户端的分页插件,提供很多特性,例如自动翻页,键盘,和滚动浏览,延迟显示以及完全可定制的导航面板.</li>
+<li>EasyUI<br>  为网页开发提供了一堆的常用UI组件，包括菜单、对话框、布局、窗帘、表格、表单等等组件。</li>
+<li>city-picker<br>  这是一个省市区三级联动插件<br>  支持在Form中通过Tab上下游走Focus，省市区可以单独点击，标签式互动.</li>
+<li>jQuery.form<br>  这是一个全面支持表单的插件,支持文件上传.包含以下方法:<pre><code>* ajaxForm
+* ajaxSubmit
+* formToArray
+* formSerialize
+* fieldSerialize
+* fieldValue
+* clearForm
+* clearFields
+* resetForm
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
       
     </div>
 
@@ -648,7 +680,7 @@ jQuery的优势
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery-总结"><span class="nav-number">1.</span> <span class="nav-text">jQuery 总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对-jQuery-的认识"><span class="nav-number">1.0.1.</span> <span class="nav-text">对 jQuery 的认识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-选择器"><span class="nav-number">1.0.2.</span> <span class="nav-text">jQuery 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性和样式操作"><span class="nav-number">1.0.3.</span> <span class="nav-text">属性和样式操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-DOM操作"><span class="nav-number">1.0.4.</span> <span class="nav-text">jQuery DOM操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-动画"><span class="nav-number">1.0.5.</span> <span class="nav-text">jQuery 动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-事件"><span class="nav-number">1.0.6.</span> <span class="nav-text">jQuery 事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-Ajax"><span class="nav-number">1.0.7.</span> <span class="nav-text">jQuery Ajax</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery-总结"><span class="nav-number">1.</span> <span class="nav-text">jQuery 总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对-jQuery-的认识"><span class="nav-number">1.0.1.</span> <span class="nav-text">对 jQuery 的认识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-选择器"><span class="nav-number">1.0.2.</span> <span class="nav-text">jQuery 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性和样式操作"><span class="nav-number">1.0.3.</span> <span class="nav-text">属性和样式操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-DOM操作"><span class="nav-number">1.0.4.</span> <span class="nav-text">jQuery DOM操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-动画"><span class="nav-number">1.0.5.</span> <span class="nav-text">jQuery 动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-事件"><span class="nav-number">1.0.6.</span> <span class="nav-text">jQuery 事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-Ajax"><span class="nav-number">1.0.7.</span> <span class="nav-text">jQuery Ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-插件"><span class="nav-number">1.0.8.</span> <span class="nav-text">jQuery 插件</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
