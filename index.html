@@ -231,7 +231,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/15/03-CSS3-总结/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/15/02-CSS3-总结/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="流浪猫">
@@ -256,7 +256,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/15/03-CSS3-总结/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/15/02-CSS3-总结/" itemprop="url">
                   CSS3-总结
                 </a>
               
@@ -439,6 +439,384 @@
 <li>经典网页布局案例<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">        <span class="selector-tag">html</span>,<span class="selector-tag">body</span>&#123;</div><div class="line">            <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-tag">body</span>&#123;</div><div class="line">            <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">            <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="selector-class">.container</span>&#123;</div><div class="line">            <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">            <span class="attribute">background</span>: red;</div><div class="line"></div><div class="line">            <span class="attribute">display</span>: flex;</div><div class="line"></div><div class="line">            <span class="attribute">flex-direction</span>: column;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="selector-tag">header</span>&#123;</div><div class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">            <span class="attribute">background</span>: pink;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="selector-tag">main</span>&#123;</div><div class="line">            <span class="attribute">flex</span>: <span class="number">1</span>;</div><div class="line">            <span class="attribute">background</span>: green;</div><div class="line"></div><div class="line">            <span class="attribute">display</span>: flex;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="selector-tag">section</span>&#123;</div><div class="line">            <span class="attribute">flex</span>: <span class="number">2</span>;</div><div class="line">            <span class="attribute">background</span>: blue;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="selector-tag">aside</span>&#123;</div><div class="line">            <span class="attribute">flex</span>: <span class="number">3</span>;</div><div class="line">            <span class="attribute">background</span>: purple;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="selector-tag">footer</span>&#123;</div><div class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">            <span class="attribute">background</span>: yellow;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">header</span>&gt;</span>1<span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">main</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">section</span>&gt;</span>2<span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">aside</span>&gt;</span>3<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">footer</span>&gt;</span>4<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/16/02-媒体查询 @media-介绍/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="流浪猫">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/llmaopp.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="流浪猫的 Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/02-媒体查询 @media-介绍/" itemprop="url">
+                  媒体查询 @media-介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-16T23:47:33+08:00">
+                2016-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h1>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/15/02-视口属性 viewpoint-介绍/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="流浪猫">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/llmaopp.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="流浪猫的 Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/15/02-视口属性 viewpoint-介绍/" itemprop="url">
+                  视口属性 viewpoint-介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-15T23:47:33+08:00">
+                2016-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="视口属性-viewpoint-介绍"><a href="#视口属性-viewpoint-介绍" class="headerlink" title="视口属性-viewpoint-介绍"></a>视口属性-viewpoint-介绍</h1><ul>
+<li><p>对 viewpoint 的深入理解可以参考这篇博客<br><a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">移动前端开发之viewport的深入理解</a></p>
+</li>
+<li><p>viewpoint 概念<br>通俗的讲，移动设备上的viewport就是设备的屏幕上能用来显示我们的网页的那一块区域，在具体一点，就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域，但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可视区域要大，也可能比浏览器的可视区域要小。在默认情况下，一般来讲，移动设备上的viewport都是要大于浏览器可视区域的，这是因为考虑到移动设备的分辨率相对于桌面电脑来说都比较小，所以为了能在移动设备上正常显示那些传统的为桌面浏览器设计的网站，移动设备上的浏览器都会把自己默认的viewport设为980px或1024px（也可能是其它值，这个是由设备自己决定的），但带来的后果就是浏览器会出现横向滚动条，因为浏览器可视区域的宽度是比这个默认的viewport的宽度要小的。</p>
+</li>
+<li><p>viewpoint 语法介绍</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html document --&gt;</div><div class="line">&lt;meta name=&quot;viewport&quot;</div><div class="line">content=&quot;</div><div class="line">height = [pixel_value | device-height] ,</div><div class="line">width = [pixel_value | device-width ] ,</div><div class="line">initial-scale = float_value ,</div><div class="line">minimum-scale = float_value ,</div><div class="line">maximum-scale = float_value ,</div><div class="line">user-scalable = [yes | no] ,</div><div class="line">target-densitydpi = [dpi_value | device-dpi | high-dpi | medium-dpi | low-dpi]</div><div class="line">&quot;</div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>width<br>width表示网页的布局layout宽度，控制 viewport 的大小，可以指定的一个值(默认单位px)或者特殊的值，如: width=960, initial-scale=0.33（960是页面layout的宽度,这里设width意思是将其它缩小到大约1/3，这样正好可以在320像素的手机设备上看到整个网页）<br>或 width=device-width (设备的宽度,通用写法)</p>
+</li>
+<li><p>height<br>和width用法相同，指定高度。</p>
+</li>
+<li><p>target-densitydpi<br>一个屏幕像素密度是由屏幕分辨率决定的，通常定义为每英寸点的数量（dpi）。Android支持三种屏幕像素密度：低像素密度，中像素密度，高像素密度。一个低像素密度的屏幕每英寸上的像素点更少，而一个高像素密度的屏幕每英寸上的像素点更多。Android Browser和WebView默认屏幕为中像素密度。<br>device-dpi –使用设备原本的 dpi 作为目标 dp。 不会发生默认缩放。<br>high-dpi – 使用hdpi 作为目标 dpi。 中等像素密度和低像素密度设备相应缩小。<br>medium-dpi – 使用mdpi作为目标 dpi。 高像素密度设备相应放大， 像素密度设备相应缩小。 这是默认的target density.<br>low-dpi -使用mdpi作为目标 dpi。中等像素密度和高像素密度设备相应放大。<br>指定一个具体的dpi 值作为target dpi. 这个值的范围必须在70–400之间。</p>
+</li>
+<li><p>initial-scale<br>初始缩放。即页面打开时默认的初始缩放程度。这是一个浮点值，是页面大小的一个乘数。例如，如果你设置初始缩放为“1.0”，那么，web页面在展现的时候就会以target density分辨率的1:1来展现。如果你设置为“2.0”，那么这个页面就会放大为2倍。</p>
+</li>
+<li><p>maximum-scale<br>最大缩放。即允许的最大缩放程度。这也是一个浮点值，用以指出页面大小与屏幕大小相比的最大乘数。例如，如果你将这个值设置为“2.0”，那么这个页面与target size相比，最多能放大2倍。</p>
+</li>
+<li><p>minimum-scale<br>最小缩放。即允许的最大缩放程度。这也是一个浮点值，用以指出页面大小与屏幕大小相比的最大乘数。例如，如果你将这个值设置为“2.0”，那么这个页面与target size相比，最多能缩小2倍。</p>
+</li>
+<li><p>user-scalable<br>用户调整缩放。即用户是否能改变页面缩放程度。如果设置为yes则是允许用户对其进行改变，反之为no。默认值是yes。如果你将其设置为no，那么minimum-scale 和 maximum-scale都将被忽略，因为根本不可能缩放。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/15/02-Bootstrap-快速使用/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="流浪猫">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/llmaopp.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="流浪猫的 Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/15/02-Bootstrap-快速使用/" itemprop="url">
+                  Bootstrap-快速使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-15T23:47:33+08:00">
+                2016-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h1><p>Bootstrap 是最受欢饮的 HTML CSS 和 JS 框架, 用于开发响应式布局,移动设备优先的项目.<br><a href="http://www.bootcss.com/" target="_blank" rel="external">Bootstrap 中文网</a></p>
 
           
         
@@ -1281,463 +1659,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/15/01-HTML5-表单/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="流浪猫">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/llmaopp.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="流浪猫的 Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/15/01-HTML5-表单/" itemprop="url">
-                  HTML5-表单
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-15T23:47:33+08:00">
-                2016-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><hr>
-<h3 id="输入类型"><a href="#输入类型" class="headerlink" title="输入类型"></a>输入类型</h3><ul>
-<li><p>email<br>  email 类型用于应该包含 e-mail 地址的输入域.<br>  在提交表单时，会自动验证 email 域的值.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">E-mail: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"user_email"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>url<br>  url类型用于应该包含 URL 地址的输入域.<br>  在提交表单时,会自动验证 url 域的值.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Homepage: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"url"</span> <span class="attr">name</span>=<span class="string">"use_url"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>number<br>  number类型用于应该包含数值的输入域.<br>  还能设定所接受的数字的限制.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Points: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">name</span>=<span class="string">"points"</span> <span class="attr">min</span>=<span class="string">"1"</span> <span class="attr">max</span>=<span class="string">"10"</span> <span class="attr">step</span>=<span class="string">"2"</span> <span class="attr">value</span>=<span class="string">"6"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>range<br>  range类型用于应该包含一定范围内数字值的输入域.<br>  range类型显示为滑动条<br>  还能设定对所接受数字的限制<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"point"</span> <span class="attr">min</span>=<span class="string">"1"</span> <span class="attr">max</span>=<span class="string">"10"</span> <span class="attr">step</span>=<span class="string">"2"</span> <span class="attr">value</span>=<span class="string">"2"</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>date pickers</p>
-<ul>
-<li>date 选取日 年 月</li>
-<li>month 选取月 年</li>
-<li>week 选取周 年</li>
-<li>time 选取时间(小时 分钟)</li>
-<li>datetime 选取时间 日 月 年 (UTC 时间)</li>
-<li>datetime-local 选取时间 日 月 年 (本地时间)<br>实例<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Date: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span> <span class="attr">name</span>=<span class="string">"user_date"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>tel<br>  tel类型用于应该包含电话号码的输入域.<br>  在表单提交时,会自动验证 tel域的值.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Tel: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">name</span>=<span class="string">"user_tel"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>color<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Color: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"color"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>search<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Search: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span> <span class="attr">name</span>=<span class="string">"search"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><ul>
-<li><p>datalist<br>  datalist 元素规定输入域的选项列表.<br>  列表是通过 datalist 内的 option 元素创建的.<br>  如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Hobby: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">list</span>=<span class="string">"hobby"</span> <span class="attr">name</span>=<span class="string">"hobby"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"hobby"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"basketball"</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"football"</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"pingpang"</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- option元素永远都要设置 value 属性 --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>keygen<br>  keygen 元素提供一种验证用户的可靠方法.<br>  keygen 元素是密钥对生成器.当表单提交时,会生成两个键,一个公钥,一个私钥.公钥发送到服务器,私钥存储到客户端.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"demo"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></div><div class="line">    Username: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"user_name"</span>&gt;</span></div><div class="line">    Encryption: <span class="tag">&lt;<span class="name">keygen</span> <span class="attr">name</span>=<span class="string">"security"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>output<br>  output 元素用于不同类型的输出,比如计算或脚本输出.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">resCalc</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">numA=<span class="built_in">document</span>.getElementById(<span class="string">"num_a"</span>).value;</div><div class="line">numB=<span class="built_in">document</span>.getElementById(<span class="string">"num_b"</span>).value;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"result"</span>).value=<span class="built_in">Number</span>(numA)+<span class="built_in">Number</span>(numB);</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>使用 output 元素的简易计算器：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">onsubmit</span>=<span class="string">"return false"</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"num_a"</span> /&gt;</span> +</div><div class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"num_b"</span> /&gt;</span> =</div><div class="line"> <span class="tag">&lt;<span class="name">output</span> <span class="attr">id</span>=<span class="string">"result"</span> <span class="attr">onforminput</span>=<span class="string">"resCalc()"</span>&gt;</span><span class="tag">&lt;/<span class="name">output</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="表单属性"><a href="#表单属性" class="headerlink" title="表单属性"></a>表单属性</h3><ul>
-<li><p>form 属性</p>
-<ul>
-<li><p>autocomplete<br>  autocomplete 属性规定 form 或 input 域应该拥有的自动完成功能.<br>  注释：autocomplete 适用于 <form> 标签，以及以下类型的 <input> 标签：text, search, url, telephone, email, password, datepickers, range 以及 color.<br>  当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项.<br>  实例</form></p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"demo"</span> <span class="attr">method</span>=<span class="string">"get"</span> <span class="attr">autocomplete</span>=<span class="string">"on"</span>&gt;</span></div><div class="line">    First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"fname"</span> /&gt;</span></div><div class="line">    Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"lname"</span> /&gt;</span></div><div class="line">    E-mail: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">autocomplete</span>=<span class="string">"off"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>novalidate<br>  novalidate 属性规定在提交表单时不应该验证 form 或者 input 域.<br>  注释：novalidate 属性适用于 <form> 以及以下类型的 <input> 标签：text, search, url, telephone, email, password, date pickers, range 以及 color.<br>  实例</form></p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"domo"</span> <span class="attr">method</span>=<span class="string">"get"</span> <span class="attr">novalidate</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>input 属性</p>
-<ul>
-<li>autocomplete</li>
-<li><p>autofocus<br>  autofocus 属性规定页面加载时,域自动获取焦点.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">User name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"user_name"</span> <span class="attr">autofocus</span>=<span class="string">"autofocus"</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>form<br>  form 属性规定输入域所属的一个或多个表单.<br>  form 属性必须引用所属表单的 id.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"demo"</span> <span class="attr">method</span>=<span class="string">"get"</span> <span class="attr">id</span>=<span class="string">"user_name"</span>&gt;</span></div><div class="line">    First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"fname"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line">Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"lname"</span> <span class="attr">form</span>=<span class="string">"user_name"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>multiple<br>  multiple 属性规定输入域可选择多个值.<br>  注释：multiple 属性适用于以下类型的 <input> 标签：email 和 file.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Select images: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"img"</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>placeholder<br>  placeholder 属性提供一种提示,描述输入域所期待的值.<br>  注释：placeholder 属性适用于以下类型的 <input> 标签：text, search, url, telephone, email 以及 password.<br>  提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span> <span class="attr">name</span>=<span class="string">"search"</span> <span class="attr">placeholder</span>=<span class="string">"黄山烧饼"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>required<br>  required 属性规定必须在提交之前填写输入域.<br>  注释：required 属性适用于以下类型的 <input> 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"user_name"</span> <span class="attr">required</span>=<span class="string">"required"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>pattern<br>  pattern 属性规定用于验证 input 域的模式, 该模式是正则表达式.<br>  注释：pattern 属性适用于以下类型的 <input> 标签：text, search, url, telephone, email 以及 password.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Tel: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"telephone"</span> <span class="attr">name</span>=<span class="string">"telephone"</span> <span class="attr">pattern</span>=<span class="string">"[0-9]&#123;11&#125;"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>min max step<br>  min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定.<br>  max 属性规定输入域所允许的最大值.<br>  min 属性规定输入域所允许的最小值.<br>  step 属性为输入域规定合法的数字间隔（如果 step=”3”，则合法的数是 -3,0,3,6 等）.<br>  注释：min、max 和 step 属性适用于以下类型的 <input> 标签：date pickers、number 以及 range.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Points: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">name</span>=<span class="string">"points"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">max</span>=<span class="string">"10"</span> <span class="attr">step</span>=<span class="string">"3"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>width 和 height<br>  height 和 width 属性规定用于 image 类型的 input 标签的图像高度和宽度.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"img/nihao.jpg"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"100"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>表单重写属性<br>  表单重写属性（form override attributes）允许您重写 form 元素的某些属性设定.<br>  formaction - 重写表单的 action 属性<br>  formenctype - 重写表单的 enctype 属性<br>  formmethod - 重写表单的 method 属性<br>  formnovalidate - 重写表单的 novalidate 属性<br>  formtarget - 重写表单的 target 属性<br>  注释：表单重写属性适用于以下类型的 <input> 标签：submit 和 image.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"demo_form.asp"</span> <span class="attr">method</span>=<span class="string">"get"</span> <span class="attr">id</span>=<span class="string">"user_form"</span>&gt;</span></div><div class="line">E-mail: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"userid"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"Submit"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">formaction</span>=<span class="string">"demo_admin.asp"</span> <span class="attr">value</span>=<span class="string">"Submit as admin"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">formnovalidate</span>=<span class="string">"true"</span> <span class="attr">value</span>=<span class="string">"Submit without validation"</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/13/01-HTML5-文件读取/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="流浪猫">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/llmaopp.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="流浪猫的 Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/13/01-HTML5-文件读取/" itemprop="url">
-                  HTML5-文件操作
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-13T23:47:33+08:00">
-                2016-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="HTML5-文件操作"><a href="#HTML5-文件操作" class="headerlink" title="HTML5-文件操作"></a>HTML5-文件操作</h1><hr>
-<p>在 HTML 文档中 <code>&lt;input type=&quot;file&quot;&gt;</code> 标签每出现一次，一个 FileUpload 对象就会被创建.<br>该元素包含一个文本输入字段,用来输入文件名,还有一个按钮,用来打开文件选择对话框以便图形化选择文件.<br>该元素的 value 属性保存了用户指定的文件的名称,但是当包含一个 file-upload 元素的表单被提交的时候,浏览器会向服务器发送选中的文件的内容而不仅仅是发送文件名.<br>当用户选择或编辑一个文件名,file-upload 元素触发 onchange 事件.</p>
-<ul>
-<li><p>这是一个读取文件的简单例子:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">  <span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">html</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"oscar999"</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">  </span></div><div class="line">  function  handleFiles(files)  </div><div class="line">  &#123;  </div><div class="line">    if(files.length)  </div><div class="line">    &#123;  </div><div class="line">       var file = files[0];  </div><div class="line">       var reader = new FileReader();  </div><div class="line">       reader.onload = function()  </div><div class="line">       &#123;  </div><div class="line">           document.getElementById("filecontent").innerHTML = this.result;  </div><div class="line">       &#125;;  </div><div class="line">       reader.readAsText(file);  </div><div class="line">    &#125;  </div><div class="line">  &#125;  </div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span>  </div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>  </div><div class="line">  </div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"file"</span> <span class="attr">onchange</span>=<span class="string">"handleFiles(this.files)"</span>/&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"filecontent"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>此外 HTML5 支持的 file 操作还支持文件的拖拽,以下是一个简单例子:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">  <span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">html</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"oscar999"</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dropbox"</span>&gt;</span> Drop Here <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"filecontent"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">  </span></div><div class="line">      var dropbox = document.getElementById("dropbox");    </div><div class="line">      dropbox.addEventListener("dragenter", dragenter, false);    </div><div class="line">      dropbox.addEventListener("dragover", dragover, false);    </div><div class="line">      dropbox.addEventListener("drop", drop, false);     </div><div class="line">  </div><div class="line">    function dragenter(e) &#123;    </div><div class="line">        e.stopPropagation();    </div><div class="line">        e.preventDefault();    </div><div class="line">    &#125;    </div><div class="line">  </div><div class="line">    function dragover(e) &#123;    </div><div class="line">        e.stopPropagation();    </div><div class="line">        e.preventDefault();    </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    function drop(e) &#123;    </div><div class="line">        e.stopPropagation();    </div><div class="line">        e.preventDefault();     </div><div class="line">        var dt = e.dataTransfer;    </div><div class="line">        var files = dt.files;  </div><div class="line">        if(files.length)  </div><div class="line">        &#123;  </div><div class="line">           var file = files[0];  </div><div class="line">           var reader = new FileReader();  </div><div class="line">           reader.onload = function()  </div><div class="line">           &#123;  </div><div class="line">               document.getElementById("filecontent").innerHTML = this.result;  </div><div class="line">           &#125;;  </div><div class="line">           reader.readAsText(file);  </div><div class="line">        &#125;  </div><div class="line">    &#125;   </div><div class="line">            </div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>同后端的交互:<br>在一般的HTML中,使用方式是把file input 放在form 中, 以POST 方式把文件传递到后端.<br>在 HTML5 中, 也可以通过 FileReader 的 readAsBinaryString 方法读取到文件的二进制码,然后通过 XMLHttpRequest 的 sendAsBinary 方法将其发送出去.<br>代码如下:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();  </div><div class="line">xhr.open(<span class="string">"POST"</span>, <span class="string">"url"</span>);  </div><div class="line">xhr.overrideMimeType(<span class="string">'text/plain; charset=x-user-defined-binary'</span>);  </div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">pre</span> <span class="attr">code_snippet_id</span>=<span class="string">"422893"</span> <span class="attr">snippet_file_name</span>=<span class="string">"blog_20140709_4_2106578"</span> <span class="attr">class</span>=<span class="string">"sh_javascript sh_sourceCode"</span> <span class="attr">name</span>=<span class="string">"code"</span>&gt;</span></span></div><div class="line">xhr<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sh_symbol"</span>&gt;</span>.<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sh_function"</span>&gt;</span>sendAsBinary<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sh_symbol"</span>&gt;</span>(<span class="tag">&lt;/<span class="name">span</span>&gt;</span>binaryString<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sh_symbol"</span>&gt;</span>);<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span><span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/01/15/HelloWorld/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="流浪猫">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/llmaopp.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="流浪猫的 Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/01/15/HelloWorld/" itemprop="url">
-                  HelloWorld
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-01-15T23:47:33+08:00">
-                2014-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="千里之行-始于-HelloWorld"><a href="#千里之行-始于-HelloWorld" class="headerlink" title="千里之行 始于 HelloWorld"></a>千里之行 始于 HelloWorld</h2>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1785,7 +1706,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

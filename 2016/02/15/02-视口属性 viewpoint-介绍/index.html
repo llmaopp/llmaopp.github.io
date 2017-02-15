@@ -84,28 +84,25 @@
 
 
 
-<meta name="description" content="多媒体
-音频 audio元素
-audio 的使用  实例
-  1234&amp;lt;audio src=&quot;song.ogg&quot; controls=&quot;controls&quot;&amp;gt;    您的浏览器不支持此音频    &amp;lt;!-- &amp;lt;audio&amp;gt; 与 &amp;lt;/audio&amp;gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的. --&amp;gt;&amp;lt;/audio&amp;gt;
-  audio">
+<meta name="description" content="视口属性-viewpoint-介绍
+对 viewpoint 的深入理解可以参考这篇博客移动前端开发之viewport的深入理解
+
+viewpoint 概念通俗的讲，移动设备上的viewport就是设备的屏幕上能用来显示我们的网页的那一块区域，在具体一点，就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域，但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML5-多媒体">
-<meta property="og:url" content="http://yoursite.com/2016/01/16/01-HTML5-多媒体/index.html">
+<meta property="og:title" content="视口属性 viewpoint-介绍">
+<meta property="og:url" content="http://yoursite.com/2016/02/15/02-视口属性 viewpoint-介绍/index.html">
 <meta property="og:site_name" content="流浪猫的 Blog">
-<meta property="og:description" content="多媒体
-音频 audio元素
-audio 的使用  实例
-  1234&amp;lt;audio src=&quot;song.ogg&quot; controls=&quot;controls&quot;&amp;gt;    您的浏览器不支持此音频    &amp;lt;!-- &amp;lt;audio&amp;gt; 与 &amp;lt;/audio&amp;gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的. --&amp;gt;&amp;lt;/audio&amp;gt;
-  audio">
-<meta property="og:updated_time" content="2017-02-09T09:45:03.000Z">
+<meta property="og:description" content="视口属性-viewpoint-介绍
+对 viewpoint 的深入理解可以参考这篇博客移动前端开发之viewport的深入理解
+
+viewpoint 概念通俗的讲，移动设备上的viewport就是设备的屏幕上能用来显示我们的网页的那一块区域，在具体一点，就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域，但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可">
+<meta property="og:updated_time" content="2017-02-15T02:57:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML5-多媒体">
-<meta name="twitter:description" content="多媒体
-音频 audio元素
-audio 的使用  实例
-  1234&amp;lt;audio src=&quot;song.ogg&quot; controls=&quot;controls&quot;&amp;gt;    您的浏览器不支持此音频    &amp;lt;!-- &amp;lt;audio&amp;gt; 与 &amp;lt;/audio&amp;gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的. --&amp;gt;&amp;lt;/audio&amp;gt;
-  audio">
+<meta name="twitter:title" content="视口属性 viewpoint-介绍">
+<meta name="twitter:description" content="视口属性-viewpoint-介绍
+对 viewpoint 的深入理解可以参考这篇博客移动前端开发之viewport的深入理解
+
+viewpoint 概念通俗的讲，移动设备上的viewport就是设备的屏幕上能用来显示我们的网页的那一块区域，在具体一点，就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域，但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可">
 
 
 
@@ -133,13 +130,13 @@ audio 的使用  实例
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/01/16/01-HTML5-多媒体/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/02/15/02-视口属性 viewpoint-介绍/"/>
 
 
 
 
 
-  <title> HTML5-多媒体 | 流浪猫的 Blog </title>
+  <title> 视口属性 viewpoint-介绍 | 流浪猫的 Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +239,7 @@ audio 的使用  实例
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/16/01-HTML5-多媒体/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/15/02-视口属性 viewpoint-介绍/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="流浪猫">
@@ -266,7 +263,7 @@ audio 的使用  实例
             
             
               
-                HTML5-多媒体
+                视口属性 viewpoint-介绍
               
             
           </h1>
@@ -281,8 +278,8 @@ audio 的使用  实例
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-16T23:47:33+08:00">
-                2016-01-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-15T23:47:33+08:00">
+                2016-02-15
               </time>
             
 
@@ -317,21 +314,27 @@ audio 的使用  实例
       
 
       
-        <h1 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h1><hr>
-<h3 id="音频-audio元素"><a href="#音频-audio元素" class="headerlink" title="音频 audio元素"></a>音频 audio元素</h3><ul>
-<li><p>audio 的使用<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"song.ogg"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">    您的浏览器不支持此音频</div><div class="line">    <span class="comment">&lt;!-- &lt;audio&gt; 与 &lt;/audio&gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的. --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>  audio 元素支持三种音频格式:Ogg Vorbis, MP3, Wav.每种格式对各个浏览器的兼容性不同.<br>  audio 元素允许多个 source 元素.<br>  source 元素可以链接不同的音频文件.<br>  浏览器将使用第一个可识别的格式.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.ogg"</span> <span class="attr">type</span>=<span class="string">"audio/ogg"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.mp3"</span> <span class="attr">type</span>=<span class="string">"audio/mpeg"</span> /&gt;</span></div><div class="line">    您的浏览器不支持此音频</div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
+        <h1 id="视口属性-viewpoint-介绍"><a href="#视口属性-viewpoint-介绍" class="headerlink" title="视口属性-viewpoint-介绍"></a>视口属性-viewpoint-介绍</h1><ul>
+<li><p>对 viewpoint 的深入理解可以参考这篇博客<br><a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">移动前端开发之viewport的深入理解</a></p>
 </li>
-<li><p>audio 的属性<br>  | 属性 | 值 | 描述 |<br>  | —- | —- | —- |<br>  | autoplay | autoplay | 自动播放 |<br>  | controls | controls | 显示音频控件 |<br>  | loop | loop | 循环播放 |<br>  | preload | preload | 页面加载时进行加载,并预备播放,使用 autoplay 会忽视该属性 |<br>  | src | url | 音频的 url |</p>
+<li><p>viewpoint 概念<br>通俗的讲，移动设备上的viewport就是设备的屏幕上能用来显示我们的网页的那一块区域，在具体一点，就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域，但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可视区域要大，也可能比浏览器的可视区域要小。在默认情况下，一般来讲，移动设备上的viewport都是要大于浏览器可视区域的，这是因为考虑到移动设备的分辨率相对于桌面电脑来说都比较小，所以为了能在移动设备上正常显示那些传统的为桌面浏览器设计的网站，移动设备上的浏览器都会把自己默认的viewport设为980px或1024px（也可能是其它值，这个是由设备自己决定的），但带来的后果就是浏览器会出现横向滚动条，因为浏览器可视区域的宽度是比这个默认的viewport的宽度要小的。</p>
 </li>
-</ul>
-<h3 id="视频-video-元素"><a href="#视频-video-元素" class="headerlink" title="视频 video 元素"></a>视频 video 元素</h3><ul>
-<li>video 的介绍<ul>
-<li>使用方法跟 audio 类似</li>
-<li>不同之处<br>  支持视频格式: Ogg, MPEG4, WebM.<br>  比 audio 多了 width 和 height 两个属性</li>
-</ul>
+<li><p>viewpoint 语法介绍</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- html document --&gt;</div><div class="line">&lt;meta name=&quot;viewport&quot;</div><div class="line">content=&quot;</div><div class="line">height = [pixel_value | device-height] ,</div><div class="line">width = [pixel_value | device-width ] ,</div><div class="line">initial-scale = float_value ,</div><div class="line">minimum-scale = float_value ,</div><div class="line">maximum-scale = float_value ,</div><div class="line">user-scalable = [yes | no] ,</div><div class="line">target-densitydpi = [dpi_value | device-dpi | high-dpi | medium-dpi | low-dpi]</div><div class="line">&quot;</div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>width<br>width表示网页的布局layout宽度，控制 viewport 的大小，可以指定的一个值(默认单位px)或者特殊的值，如: width=960, initial-scale=0.33（960是页面layout的宽度,这里设width意思是将其它缩小到大约1/3，这样正好可以在320像素的手机设备上看到整个网页）<br>或 width=device-width (设备的宽度,通用写法)</p>
+</li>
+<li><p>height<br>和width用法相同，指定高度。</p>
+</li>
+<li><p>target-densitydpi<br>一个屏幕像素密度是由屏幕分辨率决定的，通常定义为每英寸点的数量（dpi）。Android支持三种屏幕像素密度：低像素密度，中像素密度，高像素密度。一个低像素密度的屏幕每英寸上的像素点更少，而一个高像素密度的屏幕每英寸上的像素点更多。Android Browser和WebView默认屏幕为中像素密度。<br>device-dpi –使用设备原本的 dpi 作为目标 dp。 不会发生默认缩放。<br>high-dpi – 使用hdpi 作为目标 dpi。 中等像素密度和低像素密度设备相应缩小。<br>medium-dpi – 使用mdpi作为目标 dpi。 高像素密度设备相应放大， 像素密度设备相应缩小。 这是默认的target density.<br>low-dpi -使用mdpi作为目标 dpi。中等像素密度和高像素密度设备相应放大。<br>指定一个具体的dpi 值作为target dpi. 这个值的范围必须在70–400之间。</p>
+</li>
+<li><p>initial-scale<br>初始缩放。即页面打开时默认的初始缩放程度。这是一个浮点值，是页面大小的一个乘数。例如，如果你设置初始缩放为“1.0”，那么，web页面在展现的时候就会以target density分辨率的1:1来展现。如果你设置为“2.0”，那么这个页面就会放大为2倍。</p>
+</li>
+<li><p>maximum-scale<br>最大缩放。即允许的最大缩放程度。这也是一个浮点值，用以指出页面大小与屏幕大小相比的最大乘数。例如，如果你将这个值设置为“2.0”，那么这个页面与target size相比，最多能放大2倍。</p>
+</li>
+<li><p>minimum-scale<br>最小缩放。即允许的最大缩放程度。这也是一个浮点值，用以指出页面大小与屏幕大小相比的最大乘数。例如，如果你将这个值设置为“2.0”，那么这个页面与target size相比，最多能缩小2倍。</p>
+</li>
+<li><p>user-scalable<br>用户调整缩放。即用户是否能改变页面缩放程度。如果设置为yes则是允许用户对其进行改变，反之为no。默认值是yes。如果你将其设置为no，那么minimum-scale 和 maximum-scale都将被忽略，因为根本不可能缩放。</p>
 </li>
 </ul>
 
@@ -360,8 +363,8 @@ audio 的使用  实例
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/15/01-HTML5-表单/" rel="next" title="HTML5-表单">
-                <i class="fa fa-chevron-left"></i> HTML5-表单
+              <a href="/2016/02/15/02-Bootstrap-快速使用/" rel="next" title="Bootstrap-快速使用">
+                <i class="fa fa-chevron-left"></i> Bootstrap-快速使用
               </a>
             
           </div>
@@ -370,8 +373,8 @@ audio 的使用  实例
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/17/01-H5视频播放器/" rel="prev" title="用 H5 实现一个简单的视频播放器">
-                用 H5 实现一个简单的视频播放器 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/16/02-媒体查询 @media-介绍/" rel="prev" title="媒体查询 @media-介绍">
+                媒体查询 @media-介绍 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -481,7 +484,7 @@ audio 的使用  实例
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多媒体"><span class="nav-number">1.</span> <span class="nav-text">多媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#音频-audio元素"><span class="nav-number">1.0.1.</span> <span class="nav-text">音频 audio元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视频-video-元素"><span class="nav-number">1.0.2.</span> <span class="nav-text">视频 video 元素</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#视口属性-viewpoint-介绍"><span class="nav-number">1.</span> <span class="nav-text">视口属性-viewpoint-介绍</span></a></li></ol></div>
             
 
           </div>
