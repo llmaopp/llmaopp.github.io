@@ -313,174 +313,74 @@
           
             <h2 id="angular-API"><a href="#angular-API" class="headerlink" title="angular API"></a>angular API</h2><ul>
 <li>ng 表示 AngularJS.</li>
-<li>官方网站<ul>
-<li><a href="https://angularjs.org" target="_blank" rel="external">angular</a> </li>
-<li><a href="https://code.angularjs.org/" target="_blank" rel="external">源代码</a> </li>
-</ul>
-</li>
+<li>官方网站<br><a href="https://angularjs.org" target="_blank" rel="external">angular 官网</a><br><a href="https://code.angularjs.org/" target="_blank" rel="external">源代码</a> </li>
 </ul>
 <h2 id="MVC-的基本概念"><a href="#MVC-的基本概念" class="headerlink" title="MVC 的基本概念"></a>MVC 的基本概念</h2><ul>
-<li>概念解释<ul>
-<li>M Model, 模型, 数据</li>
-<li>V View, 视图, 就是如何展示数据</li>
-<li>C Controller, 控制器, 表上如何联系数据与展示. 可以认为是主要的代码逻辑区域.</li>
-</ul>
-</li>
+<li>概念解释<br>M Model, 模型, 数据<br>V View, 视图, 就是如何展示数据<br>C Controller, 控制器, 表上如何联系数据与展示. 可以认为是主要的代码逻辑区域.</li>
 </ul>
 <h2 id="angular-基础"><a href="#angular-基础" class="headerlink" title="angular 基础"></a>angular 基础</h2><ul>
-<li><p>angular 是什么<br>ng 是一个处理单页面应用程序的 框架. 它扩展了原有的 HTML ,<br>使用标签模板指令等方法去实现动态的单页面应用程序.</p>
+<li>angular 是什么<br>ng 是一个处理单页面应用程序的 框架. 它扩展了原有的 HTML ,<br>使用标签模板指令等方法去实现动态的单页面应用程序.</li>
+</ul>
+<p>在 ng 中, 提供了一个非常不同于以往的编程方法<br>在 ng 中完全遵循 MVC 的思想, 将 html 当做展示数据的 View, 而 需要在 界面中展示的数据就是 modle.<br>在处理文本输入绑定的时候, 输入的文本内容就是数据. 所在凡是需要作为数据的标签可以利用 ng-model<br>给它取一个名字. 在有了名字以后, 代码的背后就会对应的创建一个 该名字的 Model 出来. 在数据发生变化的时候, 为了可以展示数据, 会自动的将数据展示到 界面中( 控制器 )<br>我们没有写任何代码, 原因使用了 默认的 控制器, 默认的 Model. 如果说给 ng-app 赋值一个名字. 那么 ng 就不会给我们创建默认的东西了.<br>如果需要自己创建 ng 的一些东西. 首先使用语法<br><code>angular.module( &#39;ng-app的名字&#39;, [] )</code><br>创建一个模块<br>如果需要使用 ng 写代码<br>1&gt; 必须引入 ng 代码<br>2&gt; 必须使用 ng-app, 让 ng 处理界面中的 标签<br>3&gt; 凡是需要处理的标签数据, 使用 ng-model 可以实现双向的数据绑定<br>    所谓的双向数据绑定,<br>        就是从界面中 到 model 的变化. 但是界面中数据操作发生了变化( 用户的行为背后的 model 中对应的数据一并改变.<br>        从背后到界面, 凡是 背后的 model 中数据发生了变化, 那么界面中凡是使用了model, ng-bind, 插值语法等数据的地方, 值跟着改变.<br>4&gt; 如果需要手动的控制数据的变化<br>    那么就需要手写很多的代码, 就必须首先创建一个模块, 该模块对应与界面中的 ng-app</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>模块( module ), 将一堆代码, 对象, 函数, 数据, 方法等包装到一起就是一个模块.<br>由于在该技术栈中模块, 组件等概念没有严格的定义.<br>一般将具有一类功能的数据, 方法, 对象等组合到一起, 构成一个模块<br>组件, 可以理解为 模块的功能化的结果. 所谓的组件是指可以独立完成一个具体逻辑的全部内容的集合.</p>
 <ul>
-<li><p>什么是单页面应用程序 single page application<br>所谓的单页面应用程序是整个页面站点, 无论是什么页面内容都是一个 HTML 文件, 在 HTML 文件的内部<br>操作数据的显示与变化. 所有数据改动不再使用刷新的方法, 而是利用 ajax 和 dom 操作在界面上进行调整.</p>
+<li>基本语法<br>  在 ng 中凡是一个 ng-app 就是一个模块. 可以理解模块是 很多 mvc 结构的一个集合<br>  所谓的模块就可以理解为计算机上的文件夹, 里面可以放置任意的文件, 也就是说模块中<br>  有很多对象( 函数, 对象, m, v, c, …). 最典型的是在模块中有很多控制器( 每一个<br>  控制器背后都有一个 $scoep 作为 model 载体 )</li>
+<li><p>定义与获取模块<br>  如何定义模块<br>  语法<br>  <code>angular.module( &#39;模块名&#39;, [ 依赖模块 ] )</code><br>  允许用户自己定义多个模块, 然后将这个模块与页面中 ng-app 对应的模块相结合.</p>
+<p>  angular.module 这个方法还可以用来获得已经定义的模块<br>  语法<br>  <code>angular.module( &#39;模块名&#39; )</code><br>  该方法用于获得已经定义过的模块. 凡是定义的数据都会存储在 angular 这个对象的内部.<br>  使用该方法, 可以在内部查询已经创建好的模块, 如果没有找到该模块, 那么报错. 如果找<br>  到了该模块, 则返回该模块. 即可以直接用于创建 控制器 等其他内容.</p>
+<p>  命名规则<br>  如果项目中有多个模块, 在命名的时候, 建议使用 “主名字.子名字” 的形式来命名<br>  所以在开发的时候, 常常使用这样的语法描述层级关系. 利用名字表示一个范围<br>  例如 “mainApp”, 规定了项目的名字, 旗下的其他模块, 应该描述成这个项目的xxx<br>  而此时 “的” 可以理解为 点. ( p.name ). 旗下的 login 模块, 可以命名为<br>  “mainApp.login”, 旗下的搜索模块, 可以定义为 “mainApp.search”. 如此下去,<br>  一个模块下的模块, 可以命名为:<br>  <code>&quot;mainApp.login.controller&quot;</code><br>  <code>&quot;mainApp.login.service&quot;</code></p>
 </li>
-<li><p>angular一般是怎么做的<br>ng 不推荐在代码中使用 DOM 操作. 因此一般在 ng 项目中很少使用 DOM 操作.</p>
-<p>在 ng 中, 提供了一个非常不同于以往的编程方法<br>  在 ng 中完全遵循 MVC 的思想, 将 html 当做展示数据的 View, 而 需要在 界面中展示的数据就是 modle.<br>  在处理文本输入绑定的时候, 输入的文本内容就是数据. 所在凡是需要作为数据的标签可以利用 ng-model<br>  给它取一个名字. 在有了名字以后, 代码的背后就会对应的创建一个 该名字的 Model 出来. 在数据发生变化<br>  的时候, 为了可以展示数据, 会自动的将数据展示到 界面中( 控制器 )</p>
-<p>  我们没有写任何代码, 原因使用了 默认的 控制器, 默认的 Model. 如果说给 ng-app 赋值一个名字.<br>  那么 ng 就不会给我们创建默认的东西了.</p>
-<p>  如果需要自己创建 ng 的一些东西. 首先使用语法</p>
-<pre><code>angular.module( &apos;ng-app的名字&apos;, [] )
-创建一个模块
-</code></pre><p>如果需要使用 ng 写代码<br>1&gt; 必须引入 ng 代码<br>2&gt; 必须使用 ng-app, 让 ng 处理界面中的 标签<br>3&gt; 凡是需要处理的标签数据, 使用 ng-model 可以实现双向的数据绑定</p>
-<pre><code>所谓的双向数据绑定, 
-  就是从界面中 到 model 的变化. 但是界面中数据操作发生了变化( 用户的行为 ), 背后的 model 中对应的数据一并改变.
-  从背后到界面, 凡是 背后的 model 中数据发生了变化, 那么界面中凡是使用了 ng-model, ng-bind, 插值语法等数据的地方, 值跟着改变.
-</code></pre><p>4&gt; 如果需要手动的控制数据的变化</p>
-<pre><code>那么就需要手写很多的代码, 就必须首先创建一个模块, 该模块对应与界面中的 ng-app
-</code></pre><p>模块( module ), 将一堆代码, 对象, 函数, 数据, 方法等包装到一起就是一个模块.</p>
-<pre><code>由于在该技术栈中模块, 组件等概念没有严格的定义. 
-一般将具有一类功能的数据, 方法, 对象等组合到一起, 构成一个模块
-组件, 可以理解为 模块的功能化的结果. 所谓的组件是指可以独立完成一个具体逻辑的全部内容的集合.
-</code></pre></li>
-</ul>
+<li><p>手动启动模块<br>  默认在 html 中只有一个 ng-app</p>
 </li>
 </ul>
-<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><ul>
-<li><p>基本语法<br>在 ng 中凡是一个 ng-app 就是一个模块. 可以理解模块是 很多 mvc 结构的一个集合<br>所谓的模块就可以理解为计算机上的文件夹, 里面可以放置任意的文件, 也就是说模块中<br>有很多对象( 函数, 对象, m, v, c, …). 最典型的是在模块中有很多控制器( 每一个<br>控制器背后都有一个 $scoep 作为 model 载体 )</p>
-</li>
-<li><p>定义与获取模块<br>如何定义模块<br>  语法</p>
-<pre><code>angular.module( &apos;模块名&apos;, [ 依赖模块 ] )
-</code></pre><p>  允许用户自己定义多个模块, 然后将这个模块与页面中 ng-app 对应的模块相结合.</p>
-<p>  练习: 在页面中准备两套 input 同步代码, 要求两个控制器独立的写在两个 js 文件中.</p>
-<p>angular.module 这个方法还可以用来获得已经定义的模块<br>  语法</p>
-<pre><code>angular.module( &apos;模块名&apos; )
-</code></pre><p>  该方法用于获得已经定义过的模块. 凡是定义的数据都会存储在 angular 这个对象的内部.<br>  使用该方法, 可以在内部查询已经创建好的模块, 如果没有找到该模块, 那么报错. 如果找<br>  到了该模块, 则返回该模块. 即可以直接用于创建 控制器 等其他内容.</p>
-<p>  后面会学习到 控制器, 过滤器, 服务, 指令, …</p>
-</li>
-<li><p>手动启动模块<br>默认在 html 中只有一个 ng-app</p>
-</li>
-</ul>
-<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>  在 传统的 MVC 框架中, 控制器是联系 view 与 model 的桥梁, 一般书写代码都在<br>  控制器中. 在控制器里面调用使用视图与数据模型. 在 ng 中似乎弱化了控制器的功能.<br>  在 MVC 的思想中有两个基本问题<br>    1&gt; 数据如何同步<br>    2&gt; 业务逻辑如何实现<br>  在 ng 中所谓控制器的功能实际上表现出来的只有 模块功能的管理作用.</p>
+<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>在 传统的 MVC 框架中, 控制器是联系 view 与 model 的桥梁, 一般书写代码都在控制器中. 在控制器里面调用使用视图与数据模型. 在 ng 中似乎弱化了控制器的功能.<br>在 MVC 的思想中有两个基本问题<br>1&gt; 数据如何同步<br>2&gt; 业务逻辑如何实现<br>在 ng 中所谓控制器的功能实际上表现出来的只有 模块功能的管理作用.</p>
 <ul>
-<li><p>MVVM 的基本概念<br>正因为, 减少了控制器的作用, 但是引入了一个新的对象, 这个对象与界面中数据一一对应,<br>并且支持数据的双向绑定. 这样的一个对象与 Model 还是有一定的区别. 这个对象称为<br>ViewModel, 基于视图的数据模型.</p>
-<p>因此弱化了 controller 的概念, 但是强化了 viewmodel 的功能. 因此有人称 ng 是 MVVM 框架.</p>
+<li><p>MVVM 的基本概念<br>正因为, 减少了控制器的作用, 但是引入了一个新的对象, 这个对象与界面中数据一一对应,<br>并且支持数据的双向绑定. 这样的一个对象与 Model 还是有一定的区别. 这个对象称为ViewModel, 基于视图的数据模型.<br>因此弱化了 controller 的概念, 但是强化了 viewmodel 的功能. 因此有人称 ng 是 MVVM 框架.</p>
 </li>
-<li><p>基本写法<br>  如何创建控制器<br>  语法:</p>
-<pre><code>module.controller( &apos;控制器的名字&apos;, function ( $scope ) &amp;#123
-  // ...
-&amp;#125);
-// 在内部执行的时候, 会将第二个参数转换成数组 的形式
-// 在代码的运行内部利用参数可以获得函数体, 将其 toString 后可以获得参数列表
-// 再将其拼接成 数组
-// [ &apos;$scope&apos;, function ( $scope ) &amp;#123 ... &amp;#125 ]
-</code></pre><p>  完整的写法是</p>
-<pre><code>module.controller( &apos;控制器的名字&apos;, [ &apos;$scope&apos;, function ( $scope ) &amp;#123
-  // ...
-&amp;#125] );
-</code></pre><p>  如果代码写成</p>
-<pre><code>module.controller( &apos;控制器的名字&apos;, function ( abc ) &amp;#123
-  // ...
-&amp;#125);
-=&gt;
-module.controller( &apos;控制器的名字&apos;, [ &apos;abc&apos;, function ( abc ) &amp;#123
-  // ...
-&amp;#125]);
-</code></pre><p>  如果写成</p>
-<pre><code>module.controller( &apos;控制器的名字&apos;, function ( $scope, $widnow, $http ) &amp;#123
-  // ...
-&amp;#125);
-=&gt;
-module.controller( &apos;控制器的名字&apos;, [ &apos;$scope&apos;, &apos;$widnow&apos;, &apos;$http&apos;, function ( $scope, $widnow, $http ) &amp;#123
-  // ...
-&amp;#125]);
-</code></pre></li>
-<li><p>依赖注入</p>
-<p>  创建对象的方法很多, 常用的是 构造函数( 构造器, constructor ), 和工厂( factory )模式<br>  所以在代码中, 创建对象的函数, 常常称为工厂函数, 利用工厂函数创建对象的设计模式就是工厂模式<br>  Object.create(  )</p>
-<p>  依赖注入</p>
-<pre><code>所谓的依赖就是指, 在实现某些功能的时候, 需要某些特定的对象.
-所谓的注入, 就是需要某个对象的时候, 作为参数传入
-
-因此依赖注入就是, 在需要使用某一个对象的时候, 利用参数传入即可
-</code></pre></li>
+<li><p>基本写法<br>如何创建控制器<br>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">module.controller( &apos;控制器的名字&apos;, function ( $scope ) &amp;#123;</div><div class="line">  // ...</div><div class="line">&amp;#125;);</div><div class="line">// 在内部执行的时候, 会将第二个参数转换成数组 的形式</div><div class="line">// 在代码的运行内部利用参数可以获得函数体, 将其 toString 后可以获得参数列表</div><div class="line">// 再将其拼接成 数组</div><div class="line">// [ &apos;$scope&apos;, function ( $scope ) &amp;#123; ... &amp;#125; ]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>完整的写法是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.controller( &apos;控制器的名字&apos;, [ &apos;$scope&apos;, function ( $scope ) &amp;#123;</div><div class="line">  // ...</div><div class="line">&amp;#125;] );</div></pre></td></tr></table></figure></p>
+<ul>
+<li>依赖注入<br>创建对象的方法很多, 常用的是 构造函数( 构造器, constructor ), 和工厂( factory )模式所以在代码中, 创建对象的函数, 常常称为工厂函数, 利用工厂函数创建对象的设计模式就是工厂模式<br>依赖注入<br>  所谓的依赖就是指, 在实现某些功能的时候, 需要某些特定的对象.<br>  所谓的注入, 就是需要某个对象的时候, 作为参数传入<br>  因此依赖注入就是, 在需要使用某一个对象的时候, 利用参数传入即可</li>
 </ul>
 <h2 id="作用域-scope"><a href="#作用域-scope" class="headerlink" title="作用域 scope"></a>作用域 scope</h2><ul>
-<li><p>作用域对象<br>就是 $scope<br>-&gt; 什么时候创建 $scope<br>  在 ng 凡是有 控制器就有 $scope 存在.<br>  在 ng 中还有一个特点, 就是懒加载, 也就是说无论是什么对象只有在使用的时候被创建.</p>
-<p>-&gt; 多个 $scope 之间的 关系是什么<br>  在 ng 中 控制器可以分配作用域, 即凡是定义一个 控制器 就会创建 一个 $scope. 如果控制器有<br>  嵌套( 在一个 控制器里定义另一个控制器 ), 那么内控制器的 $scope 原型继承自 外控制器的 $scope</p>
-<p>  对象 a 原型继承自 对象 b, 就是说 a 可以使用 b 中的方法, a 的 <strong>proto</strong> 就是 b<br>  Object.create( b ) -&gt; a</p>
-<p>  在 原型继承中 如果 父对象 与 子对象 同时具有同名的属性会怎样?<br>  -&gt; 在 原型继承中 子对象可以继承访问 父对象的所有成员</p>
-<pre><code>var base = &amp;#123 name: &apos;jim&apos; &amp;#125;
-var sub = Object.create( base );
-console.log( sub.name );
-</code></pre><p>  -&gt; 如果在原型继承中 修改或设置 子对象的属性, 相当于给当前对象增加了属性.</p>
-<pre><code>sub.age = 19;
-</code></pre><p>  -&gt; 如果修改或设置 子对象中 与 父对象同名的属性, 实际上父对象不变, 而是给子对象增加了对应的属性</p>
-<pre><code>sub.name = &apos;tom&apos;;
-// 除非 sub.__proto__.name = &apos;tom&apos;
-
-根据属性搜索原则, 在利用子对象访问 name 属性的时候, 只操作子对象, 与父对象无关.
-
-需要具备一个能力, 看 html 标签 绘制 scope 关系
-</code></pre><p>-&gt; 为什么一开始的代码中没有写 controller 也可以双向绑定</p>
-<pre><code>在 ng 程序中, 一旦使用 了 ng-app 就表明该标签与其子标签被 ng 处理
+<li>作用域对象就是 $scope<br>  1,什么时候创建 $scope<br>  在 ng 凡是有 控制器就有 $scope 存在.<br>  在 ng 中还有一个特点, 就是懒加载, 也就是说无论是什么对象只有在使用的时候被创建.<br>  2,多个 $scope 之间的 关系是什么<br>  在 ng 中 控制器可以分配作用域, 即凡是定义一个 控制器 就会创建 一个 $scope. 如果控制器有<br>  嵌套( 在一个 控制器里定义另一个控制器 ), 那么内控制器的 $scope 原型继承自 外控制器的$scope<br>  3,为什么一开始的代码中没有写 controller 也可以双向绑定<pre><code>在 ng 程序中, 一旦使用 了 ng-app 就表明该标签与其子标签被 ng 处理
 实际上在背后, 凡是有了 ng-app 的背后都会被创建一个 $rootScope 的对象
 它就是所有的 $scope 的祖宗, 所有的 $scope 都是直接或间接继承与 $rootScope 的
-
 凡是没有写 ng-controller 的 ng-model 都是 $rootScope 的属性
-
-这个 $rootScope 是程序一开始被创建的, 因此不是使用 controller 来访问
-ng 的 module 有一个方法, 叫做 run(), 表示运行, 即 ng 程序一运行的时候就会
-执行该方法.
-
+这个 $rootScope 是程序一开始被创建的, 因此不是使用 controller 来访问ng 的 module 有一个方法, 叫做 run(), 表示运行, 即 ng 程序一运行的时候就会执行该方法.
 语法: 
-    module.run( [ &apos;...&apos;, function ( ... ) &amp;#123 ... &amp;#125 ] )
+`module.run( [ &apos;...&apos;, function ( ... ) &amp;#123; ... &amp;#125; ] )`
 </code></pre></li>
-<li><p>搭建本地 http 服务器<br>1&gt; 在 node 官网下载 node 安装包<br>  下载 .msi 格式的需要双击安装<br>  如果下载 zip 格式的 可以配置命令行手动安装<br>2&gt; 下一步下一步安装<br>  安装完成以后, 验证是否安装成功使用<br>  node -v<br>  npm -v<br>3&gt; 安装成功后使用 安装 hs 服务器软件<br>  npm install -g http-server<br>4&gt; 使用 shift + 右键 菜单中可以看到 在当前目录下 打开命令行<br>5&gt; 键入 hs -o 或 http-server -o 可以打开服务,在 当前目录下搭建 http 服务器, 并打开页面<br>  默认载入 index.html 文件</p>
-<p>和 http-server 一样, 有一个 服务软件 browser-sync </p>
-</li>
+<li>搭建本地 http 服务器<br>  1, 在 node 官网下载 node 安装包<br>  下载 .msi 格式的需要双击安装<br>  如果下载 zip 格式的 可以配置命令行手动安装<br>  2, 下一步下一步安装<br>  安装完成以后, 验证是否安装成功使用<br>  <code>node -v</code><br>  <code>npm -v</code><br>  3, 安装成功后使用 安装 hs 服务器软件<br>  <code>npm install -g http-server</code><br>  4, 使用 shift + 右键 菜单中可以看到 在当前目录下 打开命令行<br>  5, 键入 <code>hs -o</code> 或 <code>http-server -o</code> 可以打开服务,在 当前目录下搭建 http 服务器, 并打开页面<br>  默认载入 index.html 文件<br>  和 http-server 一样, 有一个 服务软件 browser-sync </li>
 </ul>
 <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><ul>
-<li><p>什么是事件<br>  一般涉及到事件的时候, 指的事件机制, 通俗的解释是 当用户执行某一个行为的时候, 浏览器会自动的调用预先注册好的函数.<br>  与事件相关的名字有很多<br>  1&gt; 事件处理函数. 就是响应用户的函数.<br>  2&gt; 事件( 做名词讲 ). 是指事件名. 注意是不包含 on 的名字.<br>  3&gt; 事件的注册( 给 on… 赋值 )<br>  … …<br>  了解<br>  4&gt; 事件监听</p>
+<li><p>什么是事件<br>  一般涉及到事件的时候, 指的事件机制, 通俗的解释是 当用户执行某一个行为的时候, 浏览器会自动的调用预先注册好的函数.<br>  与事件相关的名字有很多<br>  1, 事件处理函数. 就是响应用户的函数.<br>  2, 事件( 做名词讲 ). 是指事件名. 注意是不包含 on 的名字.<br>  3, 事件的注册( 给 on… 赋值 )<br>  4, 事件监听</p>
 <pre><code>浏览器会判断在用户发出某个行为的时候, 是否注册了对应的事件处理函数. 如果有就会发射事件.
-</code></pre><p>  5&gt; 事件发射</p>
+</code></pre><p>  5, 事件发射</p>
 <pre><code>调用内置的事件处理函数
-  a 标签为例, 点击 a 标签的时候会跳转, 那么这个跳转就是默认的处理行为
-  在默认的事件处理函数中会调用 on... 的事件处理函数( 用户的事件处理函数 )
+a 标签为例, 点击 a 标签的时候会跳转, 那么这个跳转就是默认的处理行为
+在默认的事件处理函数中会调用 on... 的事件处理函数( 用户的事件处理函数 )
 
-  猜测, 默认的逻辑为
-  function 默认() &amp;#123
-    if ( onclick ) &amp;#123
-      if ( onclick() === false ) return;
-    &amp;#125
-    // 默认的逻辑
-    // 跳转
-    location.href = ....
-  &amp;#125
+猜测, 默认的逻辑为
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function 默认() &amp;#123;</div><div class="line">  if ( onclick ) &amp;#123;</div><div class="line">    if ( onclick() === false ) return;</div><div class="line">  &amp;#125;</div><div class="line">  // 默认的逻辑</div><div class="line">  // 跳转</div><div class="line">  location.href = ....</div><div class="line">&amp;#125;</div></pre></td></tr></table></figure>
 </code></pre><p>  通俗的解释</p>
 <pre><code>京东在买东西, 我看上了一个产品( angular权威指南 ), 但是价格很高. 
 点击收藏: 提示你是否要降价提醒. 如果我选择了降价提醒.
 </code></pre><p>  事件机制在实际开发中有一个设计模式与之对应</p>
-<pre><code>1&gt; 观察者模式
-2&gt; 代理模式
+<pre><code>1, 观察者模式
+2, 代理模式
 </code></pre></li>
 <li><p>事件模型<br>  如果说需要自定义事件, 那么就需要自己实现<br>  1&gt; 事件的注册<br>  2&gt; 事件的发射<br>  3&gt; 监听一般使用内置事件进行监听</p>
-<p>  例如页面中有一个案例 btn<br>  那么需要提供函数<br>  1&gt; on 绑定事件<br>  2&gt; fire 发射事件<br>  3&gt; 监听 onclick 赋值 </p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function MyControl( dom ) &amp;#123</div><div class="line">  this.dom = ...dom...;</div><div class="line">  this.events = &amp;#123&amp;#125;</div><div class="line"></div><div class="line">  // 监听...</div><div class="line">&amp;#125</div><div class="line">MyControl.prototype = &amp;#123</div><div class="line">  on: function () &amp;#123&amp;#125,</div><div class="line">  fire: function () &amp;#123&amp;#125 </div><div class="line">&amp;#125</div><div class="line"></div><div class="line">var triBtn = new MyControl( &apos;#dv&apos; );</div><div class="line">triBtn.on( &apos;...&apos;, function () ... )</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<ul>
-<li>angular 中事件的使用<br>在 ng 中有两个非常常用的事件<br>1&gt; emit       从子控制器向父控制器方向传播事件<br>2&gt; broadcast  从父控制器向子控制器方向传播事件<br>这两个方法都是用来发射事件的, 注册使用 $on( … )</li>
+<li><p>angular 中事件的使用<br>  在 ng 中有两个非常常用的事件<br>  1, emit       从子控制器向父控制器方向传播事件<br>  2, broadcast  从父控制器向子控制器方向传播事件<br>  这两个方法都是用来发射事件的, 注册使用 $on( … )</p>
+</li>
 </ul>
 <h2 id="表达式-expression"><a href="#表达式-expression" class="headerlink" title="表达式 expression"></a>表达式 expression</h2><ul>
-<li><p>js 中表达式的概念<br>有数据与运算符连接的, 并且有值的式子就是表达式<br>123<br>n = 123<br>func()</p>
+<li><p>js 中表达式的概念<br>  有数据与运算符连接的, 并且有值的式子就是表达式<br>  123<br>  n = 123<br>  func()</p>
 </li>
-<li><p>ng 中表达式<br>ng 中的表示式是一个类 javascript 代码片段.<br>它主要用在插值语法中( &amp;#123  &amp;#125&amp;#125 ), 或指令中( ng-click=”btn()” ). 主要用于计算值<br>或函数调用.</p>
+<li><p>ng 中表达式<br>  ng 中的表示式是一个类 javascript 代码片段.<br>  它主要用在插值语法中<code>( &amp;#123;  &amp;#125;&amp;#125; )</code>, 或指令中( ng-click=”btn()” ). 主要用于计算值或函数调用.</p>
 </li>
 </ul>
 <h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><ul>
@@ -492,25 +392,27 @@ ng 的 module 有一个方法, 叫做 run(), 表示运行, 即 ng 程序一运�
 </code></pre></li>
 <li><p>语法</p>
 <ul>
-<li><p>表达式<br>&amp;#123 数据 | 过滤器名: 参数 &amp;#125&amp;#125<br>所谓的过滤器名, 其实就是一个函数, 其中竖线表示的含义是 将前面的 “数据” 作为参数传入到 过滤器这个函数中.<br>那么函数的 第一个参数就是 前面的数据. 但是为了可以控制函数的具体实现, 函数还可以带有其他参数. 在 过滤器名<br>后面用 冒号 连接的 内容就是参数, 如果有多个参数, 例如两个参数的时候, 使用语法</p>
-<p>&amp;#123 数据 | 过滤器 : 参数1 : 参数2 &amp;#125&amp;#125</p>
+<li><p>表达式<br><code>&amp;#123; 数据 | 过滤器名: 参数 &amp;#125;&amp;#125;</code><br>所谓的过滤器名, 其实就是一个函数, 其中竖线表示的含义是 将前面的 “数据” 作为参数传入到 过滤器这个函数中.<br>那么函数的 第一个参数就是 前面的数据. 但是为了可以控制函数的具体实现, 函数还可以带有其他参数. 在 过滤器名<br>后面用 冒号 连接的 内容就是参数, 如果有多个参数, 例如两个参数的时候, 使用语法<br><code>&amp;#123; 数据 | 过滤器 : 参数1 : 参数2 &amp;#125;&amp;#125;</code></p>
 </li>
-<li><p>自定义过滤器<br>使用语法<br>  module.filter( ‘过滤器的名字’, [ function () &amp;#123</p>
-<pre><code>return function ( input ) &amp;#123  // 这个被 return 的函数就是过滤器函数
-
-&amp;#125
-</code></pre><p>  &amp;#125] );</p>
+<li><p>自定义过滤器<br>使用语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">module.filter( &apos;过滤器的名字&apos;, [ function () &amp;#123;</div><div class="line">  return function ( input ) &amp;#123;  // 这个被 return 的函数就是过滤器函数</div><div class="line"></div><div class="line">  &amp;#125;</div><div class="line">&amp;#125;] );</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="内置常用过滤器"><a href="#内置常用过滤器" class="headerlink" title="内置常用过滤器"></a>内置常用过滤器</h3><p>  filter          过滤, 该过滤器使用在数组数据的后面, 用于过滤出子数组<br>                  filter 带有三种参数形式<br>                  1&gt; 单个数据, 凡是在数组中数据与之一样的就被留下来<br>                  2&gt; 对象, 用来过滤 对象数组<br>                  3&gt; 带有一个函数, 用来对当前元素进行判断, 类似于 jquery 的 map 函数.<br>                      该函数就是在判断当前元素是否需要被过滤出来</p>
-<p>  currency        表示货币, 意味着使用金钱的方式来现实. 没有参数.<br>  number          表示已小数点后 多少位 来现实数据. 使用的时候使用语法<br>                  &amp;#123 num | number: 3 &amp;#125&amp;#125  // 保留小数点后 3 位<br>  date            采用时间格式来现实<br>                  yyyy 年份, yy 没有世纪时间的年份<br>                  MM 月<br>                  dd 日<br>                  hh 小时, HH 表示 24 小时制<br>                  mm 分钟<br>                  ss 秒<br>                  .sss 毫秒</p>
-<p>  json            以 json 的格式显示数据<br>  lowercase       转小写<br>  uppercase       转大写<br>  limitTo         表示从数组的哪一个位置开始, 到哪一个位置截取<br>                  limitTo: 3        从 左开始, 截取 前 3 个数据<br>                  limitTo: -4       从 右开始, 截取 后 4 个数据<br>  orderBy         排序<br>                  带有三个参数<br>                  1&gt; 表示按照什么属性排序, 带有负号的时候降序, 默认试试升序.<br>                  2&gt; 一个 boolean 值, 表示是否逆序<br>                  3&gt; 一个函数, 表示比较规则. 使用比较规则排序</p>
+<h3 id="内置常用过滤器"><a href="#内置常用过滤器" class="headerlink" title="内置常用过滤器"></a>内置常用过滤器</h3><ul>
+<li>filter 过滤, 该过滤器使用在数组数据的后面, 用于过滤出子数组<br>  filter 带有三种参数形式<br>  1, 单个数据, 凡是在数组中数据与之一样的就被留下来<br>  2, 对象, 用来过滤 对象数组<br>  3, 带有一个函数, 用来对当前元素进行判断, 类似于 jquery 的 map 函数.该函数就是在判断当前元素是否需要被过滤出来</li>
+<li>currency 表示货币, 意味着使用金钱的方式来现实. 没有参数.</li>
+<li>number  表示已小数点后 多少位 来现实数据. 使用的时候使用语法<br>  <code>&amp;#123; num | number: 3 &amp;#125;&amp;#125; // 保留小数点后 3 位</code></li>
+<li>date  采用时间格式来现实<br>  yyyy 年份, yy 没有世纪时间的年份<br>  MM 月<br>  dd 日<br>  hh 小时, HH 表示 24 小时制<br>  mm 分钟<br>  ss 秒<br>  .sss 毫秒</li>
+<li>json 以 json 的格式显示数据</li>
+<li>lowercase 转小写</li>
+<li>uppercase 转大写</li>
+<li>limitTo 表示从数组的哪一个位置开始, 到哪一个位置截取<br>  limitTo: 3        从 左开始, 截取 前 3 个数据<br>  limitTo: -4       从 右开始, 截取 后 4 个数据</li>
+<li>orderBy 排序<br>  带有三个参数<br>  1, 表示按照什么属性排序, 带有负号的时候降序, 默认试试升序.<br>  2, 一个 boolean 值, 表示是否逆序<br>  3, 一个函数, 表示比较规则. 使用比较规则排序</li>
+</ul>
 <h2 id="指令-directive"><a href="#指令-directive" class="headerlink" title="指令 directive"></a>指令 directive</h2><ul>
-<li><p>什么是指令<br>指令 就是 命令的意思. 简单的描述就是给一个指令( 命令 )给你, 那么你就要做很多的事情.<br>在 ng 中, 指令是写在一个标签中的一个特殊的属性, 例如 ng-XXX. 在 ng 中凡是写了指令<br>的地方, 其实背后会有一连串的代码被执行.</p>
-<p>例如:  </p>
-<pre><code>ng-controller, 背后会 创建 $scope 等数据
+<li>什么是指令<br>  指令 就是 命令的意思. 简单的描述就是给一个指令( 命令 )给你, 那么你就要做很多的事情.<br>  在 ng 中, 指令是写在一个标签中的一个特殊的属性, 例如 ng-XXX. 在 ng 中凡是写了指令的地方, 其实背后会有一连串的代码被执行.<br>  例如:  <pre><code>ng-controller, 背后会 创建 $scope 等数据
 ng-app, 背后会创建 模块, $rootScope 等数据
 ng-repeat, 直接根据 数据 创建 html 标签
 ng-model, 背后就将数据加到 最近的 一个 $scope 中
@@ -518,81 +420,81 @@ ng-click, 背后就创建一个监听 点击的事件
 ... ...
 </code></pre></li>
 </ul>
-<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><p>  // 这里的指令都是延迟, 或 需要 ng 执行得到结果的指令<br>  ng-href<br>  ng-src<br>  ng-class      用于设置 类样式的属性<br>                传统的语法是使用 class=”…”<br>                需要时常更改 class 中含有的 类样式<br>                正常情况可能是 class=”navigator hide”, 菜单被展开以后, 可以变成 class=”navigator”</p>
-<pre><code>ng-class 的语法是 需要一个对象
-例如: ng-class=&quot;&amp;#123 键: 值, 键: 值, 键: 值 &amp;#125&quot;
-此时 键名 就是 类样式的名字
-值是一个 boolean 值, 表示是否含有该类样式
+<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><ul>
+<li><p>这里的指令都是延迟, 或 需要 ng 执行得到结果的指令</p>
+<ul>
+<li>ng-href  </li>
+<li>ng-src</li>
+<li>ng-class  用于设置 类样式的属性<br>  ng-class 的语法是 需要一个对象<br>  例如: ng-class=”&#123; 键: 值, 键: 值, 键: 值 &#125;”<br>  此时 键名 就是 类样式的名字<br>  值是一个 boolean 值,<br>  例如, 要实现<br>  <code>class=&quot;navigator hide&quot;</code><br>  可以写成<br>  <code>ng-class=&quot;&amp;#123; navigator: true, hide: true &amp;#125;</code></li>
+<li><p>ng-style  该属性用于设置样式, 其样式的值按照 分号分割 罗列在 该属性中<br>  例如: </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">style=&quot;width: 200px; height: 100px; border: 1px solid red;&quot;</div><div class="line">ng-style 可以跟一个对象, 其对象的键值对 就表示 样式的名字与值</div></pre></td></tr></table></figure>
+</li>
+<li><p>ng-cloak  给所有的 使用了 ng 指令 的 html 标签加上一个 hide 类样式, 就是设置其     display: none</p>
+</li>
+<li>ng-bind  就是插值语法的指令形式<br>  <code>&lt;div&gt;&amp;#123; num &amp;#125;&amp;#125;&lt;/div&gt;</code><br>  等价于<br>  <code>&lt;div ng-bind=&quot;num&quot;&gt;&lt;/div&gt;</code></li>
+<li>ng-app</li>
+<li>ng-controller</li>
+<li>ng-model</li>
+</ul>
+</li>
+<li><p>boolean 类型的指令, 用于表示是否启用该属性<br>  用法: ng-xxx=”xxxx”</p>
+<ul>
+<li>ng-selected</li>
+<li>ng-readonly</li>
+<li>ng-disabled</li>
+</ul>
+</li>
+<li><p>具有流程控制的指令</p>
+<ul>
+<li>ng-if  元素是否存在<br>  ng-hide 与 ng-show 有类似的功能<br>  语法: ng-xxx = “xxx”</li>
+<li><p>ng-switch  就是类似于 switch-case 语句<br>  语法:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-switch=&quot;&quot; &gt;</div><div class="line">  &lt;div ng-switch-when=&quot;...&quot;&gt;....&lt;/div&gt;</div><div class="line">  &lt;div ng-switch-when=&quot;...&quot;&gt;....&lt;/div&gt;</div><div class="line">  &lt;div ng-switch-when=&quot;...&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ng-view  就是一个容器, 用于路由操作</p>
+</li>
+<li>ng-repeat  注意:<br>$index<br>$even<br>$odd<br>$first<br>$last                    </li>
+<li>ng-init</li>
+</ul>
+</li>
+<li><p>事件指令</p>
+<ul>
+<li>ng-click</li>
+<li>ng-dbclick</li>
+<li>ng-change</li>
+<li>ng-select</li>
+<li>ng-submit</li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><p>自定义指令, 就是自己写一个 类似于 ng-xxx 的 “属性”, 来用在页面中使得页面可以根据我们的需求实现<br>复杂的功能. 常用的功能就是利用一个指令封装一个复杂的 HTML 结构.<br>例如: 实现一个登陆界面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;login&quot;&gt;</div><div class="line">  请输入用户名: &lt;input type=&quot;text&quot;&gt;&lt;br&gt;</div><div class="line">  请输入密码: &lt;input type=&quot;password&quot;&gt;&lt;br&gt;</div><div class="line">  &lt;input type=&quot;button&quot; value=&quot;登陆&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>我们可以封装一个指令, 叫 it-login<br>我们只需要写代码<br><code>&lt;div it-login&gt;&lt;/div&gt;</code></p>
+<p>定义的语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">angular.module( &apos;ng-app的名字&apos;, [] )</div><div class="line">  .directive( &apos;itLogin&apos;, [ function () &amp;#123;</div><div class="line">      return &amp;#123;  // 就是这个指令的配置</div><div class="line">        template: &apos;&lt;div class=&quot;login&quot;&gt;&apos; + </div><div class="line">                  &apos;请输入用户名: &lt;input type=&quot;text&quot;&gt;&lt;br&gt;&apos; + </div><div class="line">                  &apos;请输入密码: &lt;input type=&quot;password&quot;&gt;&lt;br&gt;&apos; +</div><div class="line">                  &apos;&lt;input type=&quot;button&quot; value=&quot;登陆&quot;&gt;&apos; +</div><div class="line">                  &apos;&lt;/div&gt;&apos;</div><div class="line">      &amp;#125;;</div><div class="line">  &amp;#125;])</div></pre></td></tr></table></figure></p>
+<p>指定定义中可以使用的常用属性<br>1, template<br>2, templateUrl<br>3, restrict  用于设置指令的类型<br>    可以允许我的指令以 标签, 属性, class 或 注释的形式给出<br>    语法: restrict: ‘EACM’<br>    E: element<br>    A: attribute<br>    C: class<br>    M: common<br>4, controller<br>5, scope 作用域( 用于设置 独立作用域 )<br>    取值为 true, 表示继承作用域<br>    直接赋值一个 对象. 这个就是独立作用域( 不参与继承的 特例 )<br>6, transclude<br>    嵌入, 转换包含, 转置<br>    将使用指令时传入标签内的数据转换到 模板 中</p>
+<h2 id="路由-route"><a href="#路由-route" class="headerlink" title="路由 ( route )"></a>路由 ( route )</h2><p>在实际开发中 需要展示多个页面的数据, 我们使用 url 对数据进行获取然后填到页面中指定位置这个过程就是路由.</p>
+<p>就是将全世界的计算机连接起来, 在逻辑上就是一个网络结构, 通过路由器可以轻松的找到 对应的计算机进行访问.<br>而其中的复杂逻辑我不用考虑, 路由会帮我们找到需要的东西.</p>
+<p>再简化一点, 就是根据给定的参数( url )找到数据, 并显示给我. 这个就是路由.</p>
+<p>操作步骤<br>1, 下载 angular.js 和 angular-route.js<br>2, 在页面中放置一个容器<br>    <code>&lt;ng-view&gt;&lt;/ng-view&gt;</code><br>3, 在创建模块的时候引入 ‘ngRoute’<br>    <code>angular.module( &#39;mainApp&#39;, [ &#39;ngRoute&#39; ] )</code><br>4, 在模块中有一个方法 config 是在程序运行之前被执行的. 该方法中可以完成程序的预设值.<br>在 ng 中 config 方法和 run 方法构成了 程序的运行中 预备 和 运行 的行为<br>在 config 中配置路由信息, 使用语法<br>在路由中的参数, 就是 url 地址中 # 后面的内容( 锚, hash )<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.config( [ &apos;$routeProvider&apos;, function ( $routeProvider ) &amp;#123;</div><div class="line">    $routeProvider</div><div class="line">      .when( &apos;/&apos;, &amp;#123;</div><div class="line">        template: &apos;&apos;</div><div class="line">      &amp;#125; )</div><div class="line">      .when( &apos;/a&apos;, &amp;#123;</div><div class="line">        template: &apos;...&apos;</div><div class="line">      &amp;#125; )</div><div class="line">      ...</div><div class="line">      ...</div><div class="line">      .otherwise( &amp;#123; redirectTo: &apos;/&apos; &amp;#125; )</div><div class="line">&amp;#125;] )</div></pre></td></tr></table></figure></p>
+<p>路由中有哪些属性可以使用<br>    1, template<br>    2, templateUrl<br>    3, controller: 函数 | 字符串<br>扩展<br>    移除 路由 的 url 中的 #<br>    1, 在 config 方法中, 配置 $locationProvider, 启用 html5 模式<br>    2, 修改 根路径 为 当前页面的路径<br>    3, 修改所有的 a 标签的 href 属性</p>
+<h2 id="服务-service"><a href="#服务-service" class="headerlink" title="服务 ( service )"></a>服务 ( service )</h2><p>服务就是提供一些特定功能的对象.<br>在 ng 中, 所谓的服务就是被注入的对象.<br>在 ng 中, 被定义用来使用的数据, 对象 或 函数 就是 服务.</p>
+<ul>
+<li><p>factory<br>定义服务的语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.factory( &apos;服务名&apos;, [ function () &amp;#123;</div><div class="line">    return 服务的本体</div><div class="line">&amp;#125;] )</div></pre></td></tr></table></figure>
+</li>
+<li><p>service<br>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">module.service( &apos;服务名&apos;, 构造函数名 )</div><div class="line"></div><div class="line">与</div><div class="line">module.factory( &apos;服务名&apos;, function () &amp;#123;</div><div class="line">  return new 构造函数名();</div><div class="line">&amp;#125;)</div><div class="line">等价</div></pre></td></tr></table></figure>
+</li>
+<li><p>constant  定义常量变量<br>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module.constant( &apos;服务名&apos;, 值 )</div></pre></td></tr></table></figure>
+</li>
+<li><p>value  定义变量<br>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module.value( &apos;服务名&apos;, 值 )</div></pre></td></tr></table></figure>
+</li>
+<li><p>provider<br>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">module.provider( &apos;服务名&apos;, &amp;#123;</div><div class="line">  $get: function () &amp;#123;</div><div class="line">      return 服务本体</div><div class="line">  &amp;#125;</div><div class="line">&amp;#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>yeoman 的工具<br>1&gt; 安装 yo 工具<br>  <code>npm install -g yo</code><br>2&gt; 安装 angular 模板( gulp )<br>  <code>npm install -g generator-gulp-angular</code><br>  <code>npm install -g generator-angular</code><br>3&gt; 运行 yo 下载模板依赖<br>  <code>yo</code><br>  根据需求下载数据<br>  <code>npm install &amp; bower install</code></p>
 
-例如, 要实现
-  class=&quot;navigator hide&quot;
-可以写成
-  ng-class=&quot;&amp;#123 navigator: true, hide: true &amp;#125&quot;
-如果要写成
-  class=&quot;navigator&quot;
-可以是
-  ng-class=&quot;&amp;#123 navigator: true, hide: false &amp;#125&quot;   
-</code></pre><p>  ng-style      该属性用于设置样式, 其样式的值按照 分号分割 罗列在 该属性中<br>                例如:<br>                  style=”width: 200px; height: 100px; border: 1px solid red;”<br>                ng-style 可以跟一个对象, 其对象的键值对 就表示 样式的名字与值</p>
-<p>  ng-cloak      给所有的 使用了 ng 指令 的 html 标签加上一个 hide 类样式, 就是设置其 display: none<br>  ng-bind       就是插值语法的指令形式<br>                <div>&amp;#123 num &amp;#125&amp;#125</div><br>                等价于<br>                <div ng-bind="num"></div><br>  ng-app<br>  ng-controller<br>  ng-model</p>
-<p>  // boolean 类型的指令, 用于表示是否启用该属性<br>  // 用法: ng-xxx=”xxxx”<br>  ng-selected<br>  ng-readonly<br>  ng-disabled</p>
-<p>  // 具有流程控制的指令<br>  ng-if             元素是否存在<br>                    ng-hide 与 ng-show 有类似的功能<br>                    语法: ng-xxx = “xxx”<br>  ng-switch         就是类似于 switch-case 语句<br>                    语法:<br>                      <div ng-switch=""><br>                        <div ng-switch-when="...">….</div><br>                        <div ng-switch-when="...">….</div><br>                        <div ng-switch-when="...">….</div></div></p>
-<pre><code>&lt;/div&gt;
-</code></pre><p>  ng-view           就是一个容器, 用于路由操作<br>  ng-repeat         注意:<br>                    $index<br>                    $even<br>                    $odd<br>                    $first<br>                    $last</p>
-<p>  ng-init</p>
-<p>  // 事件指令<br>  ng-click<br>  ng-dbclick<br>  ng-change<br>  ng-select<br>  ng-submit</p>
-<p>  ng 1.5.8 中有 64 个指令</p>
-<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><p>  自定义指令, 就是自己写一个 类似于 ng-xxx 的 “属性”, 来用在页面中, 使得页面可以根据我们的需求实现<br>  复杂的功能. 常用的功能就是利用一个指令封装一个复杂的 HTML 结构.</p>
-<p>  例如: 实现一个登陆界面</p>
-  <div class="login"><br>    请输入用户名: <input type="text"><br><br>    请输入密码: <input type="password"><br><br>    <input type="button" value="登陆"><br>  </div>
-
-<p>  我们可以封装一个指令, 叫 it-login<br>  我们只需要写代码<br>  <div it-login=""></div></p>
-<p>  定义的语法<br>    angular.module( ‘ng-app的名字’, [] )<br>      .directive( ‘itLogin’, [ function () &amp;#123<br>          return &amp;#123  // 就是这个指令的配置<br>            template: ‘<div class="login">‘ +<br>                      ‘请输入用户名: <input type="text"><br>‘ +<br>                      ‘请输入密码: <input type="password"><br>‘ +<br>                      ‘<input type="button" value="登陆">‘ +<br>                      ‘</div>‘<br>          &#125;<br>      &amp;#125])</p>
-<p>  指定定义中可以使用的常用属性<br>  1&gt; template<br>  2&gt; templateUrl<br>  3&gt; restrict       用于设置指令的类型<br>                    可以允许我的指令以 标签, 属性, class 或 注释的形式给出<br>                    语法: restrict: ‘EACM’<br>                    E: element<br>                    A: attribute<br>                    C: class<br>                    M: common<br>  4&gt; controller<br>  5&gt; scope 作用域( 用于设置 独立作用域 )<br>      取值为 true, 表示继承作用域<br>      直接赋值一个 对象. 这个就是独立作用域( 不参与继承的 特例 )<br>  6&gt; transclude<br>      嵌入, 转换包含, 转置<br>      将使用指令时传入标签内的数据转换到 模板 中</p>
-<h2 id="路由-route"><a href="#路由-route" class="headerlink" title="路由 ( route )"></a>路由 ( route )</h2><p>  在实际开发中 需要展示多个页面的数据, 我们使用 url 对数据进行获取然后填到页面中指定位置这个过程就是路由.</p>
-<p>  就是将全世界的计算机连接起来, 在逻辑上就是一个网络结构, 通过路由器可以轻松的找到 对应的计算机进行访问.<br>  而其中的复杂逻辑我不用考虑, 路由会帮我们找到需要的东西.</p>
-<p>  再简化一点, 就是根据给定的参数( url )找到数据, 并显示给我. 这个就是路由.</p>
-<p>  操作步骤<br>  1&gt; 下载 angular.js 和 angular-route.js<br>  2&gt; 在页面中放置一个容器<br>      <ng-view></ng-view><br>  3&gt; 在创建模块的时候引入 ‘ngRoute’<br>      angular.module( ‘mainApp’, [ ‘ngRoute’ ] )<br>  4&gt; 在模块中有一个方法 config 是在程序运行之前被执行的. 该方法中可以完成程序的预设值.<br>      在 ng 中 config 方法和 run 方法构成了 程序的运行中 预备 和 运行 的行为<br>      在 config 中配置路由信息, 使用语法</p>
-<pre><code>.config( [ &apos;$routeProvider&apos;, function ( $routeProvider ) &amp;#123
-    $routeProvider
-      .when( &apos;/&apos;, &amp;#123
-        template: &apos;&apos;
-      &amp;#125 )
-      .when( &apos;/a&apos;, &amp;#123
-        template: &apos;...&apos;
-      &amp;#125 )
-      ...
-      ...
-      .otherwise( &amp;#123 redirectTo: &apos;/&apos; &amp;#125 )
-&amp;#125] )
-
-在路由中的参数, 就是 url 地址中 # 后面的内容( 锚, hash )
-</code></pre><p>  路由中有哪些属性可以使用<br>    1&gt; template<br>    2&gt; templateUrl<br>    3&gt; controller: 函数 | 字符串</p>
-<p>  扩展<br>    移除 路由 的 url 中的 #<br>    1&gt; 在 config 方法中, 配置 $locationProvider, 启用 html5 模式<br>    2&gt; 修改 根路径 为 当前页面的路径<br>    3&gt; 修改所有的 a 标签的 href 属性</p>
-<h2 id="服务-service"><a href="#服务-service" class="headerlink" title="服务 ( service )"></a>服务 ( service )</h2><p>  服务就是提供一些特定功能的对象.<br>  在 ng 中, 所谓的服务就是被注入的对象.<br>  在 ng 中, 被定义用来使用的数据, 对象 或 函数 就是 服务.</p>
-<p>  factory</p>
-<p>  定义服务的语法<br>    module.factory( ‘服务名’, [ function () &amp;#123<br>        return 服务的本体<br>    &amp;#125] )</p>
-<p>  service</p>
-<p>  语法<br>    module.service( ‘服务名’, 构造函数名 )</p>
-<pre><code>与
-module.factory( &apos;服务名&apos;, function () &amp;#123
-  return new 构造函数名();
-&amp;#125)
-等价
-</code></pre><p>  constant<br>  定义常量变量<br>  语法<br>    module.constant( ‘服务名’, 值 )</p>
-<p>  value<br>  定义变量<br>  语法<br>    module.value( ‘服务名’, 值 )</p>
-<p>  provider<br>  语法<br>    module.provider( ‘服务名’, &amp;#123<br>      $get: function () &amp;#123<br>          return 服务本体<br>      &amp;#125<br>    &amp;#125)</p>
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><pre><code>yeoman 的工具
-1&gt; 安装 yo 工具
-  npm install -g yo
-2&gt; 安装 angular 模板( gulp )
-  npm install -g generator-gulp-angular
-  npm install -g generator-angular
-3&gt; 运行 yo 下载模板依赖
-  yo
-  根据需求下载数据即可
-
-  npm install &amp; bower install
-</code></pre>
           
         
       
