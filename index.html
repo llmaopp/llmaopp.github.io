@@ -557,7 +557,149 @@
       
         
           
-            <h1 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h1>
+            <h1 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h1><ul>
+<li><p>对媒体查询的理解<br>媒体查询其实就是 CSS 的 if 语句. 如果宽度为800px或更宽，如果是横屏，如果分辨率是1.5dppx或更小：使用这些CSS声明。<br>媒体查询有以下三种类型:<br>1,媒介类型查询<br>2,视口相关的媒体查询<br>3,特性相关媒体查询</p>
+</li>
+<li><p>媒体查询语法介绍</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@media all and (max-width: 400) &#123;  </div><div class="line">div.sidebar &#123;  </div><div class="line">// 这些给div.sidebar定义的样式在宽度小于或等于400px时才会生效  </div><div class="line">&#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>1, 所有媒体查询都需要一个媒体类型，通常使用all是最好的。<br>2, 你应该在你的媒体查询中总是使用min-或max-前缀。通常情况下，你不关心一个准确的值，而是关心一个范围。上面的例子只要在布局视口的宽度小于或等于400px的时候就会工作，下面我们看到的例子只有在分辨率小于或等于1.5的时候才会工作。<br>3, 虽然没有定义正式的单位，但媒体查询的单位是像素。你也可以使用CSS的其他长度单位，如em或cm，不过你需要显式地定义它们。只有百分比不是很有用，说句实话我甚至不确定它们是否已经被支持了。（另外，是什么的百分比呢？)<br>4, 你可以尽情地使用媒体查询。and是逻辑运算符and，逗号是逻辑运算符or。下面来看一个更复杂的例子。下一个媒体查询会在布局视口宽度小于或等于400px，屏幕方向为竖直，分辨率小于或等于1.5的时候起作用。因为浏览器兼容性问题，最后一个条件需要两个媒体查询，并且它们被一个逗号分隔。（设备像素比小于或等于1.5，或分辨率小于或等于144dpi）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@media all and (max-width: 400) and (orientation: portrait)  </div><div class="line">and ((max-resolution: 144dpi),  </div><div class="line">(-webkit-max-device-pixel-ratio: 1.5)) &#123;  </div><div class="line">/* 只有在布局视口不超过400px、设备处于竖屏模式，并且 </div><div class="line">devicePixelRatio小于等于1.5时才会生效 */  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>5, 到目前为止，你将使用的最重要的媒体查询是width。在必须使一些东西显示在首屏的使用场景中才会使用到height。width和height的媒体查询设置了当前布局视口的宽和高，并且在所有浏览器中都能工作。使用完美meta视口标签，你可以放心地抛开布局视口的宽度，它现在与理想视口的尺寸相同。这是响应式设计的核心。height的使用没那么简单，因为它会算上浏览器的工具栏，并且这个工具栏会在用户滚动的时候进入或离开可见区域。尽情地使用它吧，不过给浏览器一些决定高度的余地。</p>
+<ul>
+<li>在媒体查询中使用 em<br>在CSS中，1em等于一个字体的大小；对于一个14px的字体，1em将等于14px宽。术语font size通常是指你的CSS给元素设置的字体大小，但在媒体查询中它指的是文档根元素的字体大小。就是html元素的字体大小。毕竟媒体查询是对整个页面起作用的，而不是对某一个特定元素。<br>在移动端，根元素的字体大小在你缩放的时候是不会变的。缩放是放大CSS像素的过程，这个过程跟字体大小没有任何关系，所以不管用户缩放了多少，1em的宽度还是同样多的CSS像素。因此，在移动端，em并不比像素优秀。<br>换句话说，em只有在你的网站的根元素字体大小有可能改变并且你希望布局根据这个变化改变的时候比像素优秀。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/15/02-移动端页面使用rem来做适配/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="流浪猫">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/llmaopp.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="流浪猫的 Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/15/02-移动端页面使用rem来做适配/" itemprop="url">
+                  移动端页面使用 rem 来做适配
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-15T23:47:33+08:00">
+                2016-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="移动端页面使用-rem-来做适配"><a href="#移动端页面使用-rem-来做适配" class="headerlink" title="移动端页面使用 rem 来做适配"></a>移动端页面使用 rem 来做适配</h1><ul>
+<li><p>什么是 rem<br>rem（font size of the root element）是指相对于根元素（即html元素）的字体大小的单位。<br>假设根元素的字体大小是10px, 则5rem的大小为 5*10=50px,<br>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">html&#123;</div><div class="line">    font-size: 10px;</div><div class="line">&#125;</div><div class="line">p&#123;</div><div class="line">    width: 2rem; /* 2*10 = 20px;*/</div><div class="line">    margin: 1rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>用 rem 来做适配<br>以前我们往往这样做页面：viewport width 设置为 device-width，然后选我们需要兼容设备的最小宽度（一般是320px）。根据这最小宽度来做页面。单位使用px和百分比。在宽度不同的设备上，页面的字体大小，内容尺寸都是一样的，不同的是，大屏的内容间的空隙比小屏的大。所以这样做的缺点就是，页面在某些尺寸的设备上显示的效果不好。<br>如果用rem来页面，我们会根据不同的设备宽度在根元素上设置不同的字体大小。宽度越宽，字体越大。然后对原本使用px的地方使用rem来替换。这样，字体大小，内容尺寸，对随着屏幕宽度的变大而变大。</p>
+</li>
+<li>具体做法<br>1 根据不同的设备宽度在根元素上设置不同的字体大小。<br>我一般会设置1rem为1/10屏幕宽度。代码如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">;</div><div class="line">(function(win) &#123;</div><div class="line">    var doc = win.document;</div><div class="line">    var docEl = doc.documentElement;</div><div class="line">    var tid;</div><div class="line"></div><div class="line">    function refreshRem() &#123;</div><div class="line">        var width = docEl.getBoundingClientRect().width;</div><div class="line">        if (width &gt; 540) &#123; // 最大宽度</div><div class="line">            width = 540;</div><div class="line">        &#125;</div><div class="line">        var rem = width / 10; // 将屏幕宽度分成10份， 1份为1rem</div><div class="line">        docEl.style.fontSize = rem + &apos;px&apos;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    win.addEventListener(&apos;resize&apos;, function() &#123;</div><div class="line">        clearTimeout(tid);</div><div class="line">        tid = setTimeout(refreshRem, 300);</div><div class="line">    &#125;, false);</div><div class="line">    win.addEventListener(&apos;pageshow&apos;, function(e) &#123;</div><div class="line">        if (e.persisted) &#123;</div><div class="line">            clearTimeout(tid);</div><div class="line">            tid = setTimeout(refreshRem, 300);</div><div class="line">        &#125;</div><div class="line">    &#125;, false);</div><div class="line"></div><div class="line">    refreshRem();</div><div class="line"></div><div class="line">&#125;)(window);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2 做页面时<br>我一般会将设计稿缩小至宽度为320px（切图标时，还是按照原图来切）。在上一步中，1rem为1/10屏幕宽度。因此，px与rem的转化为 1px = 1 / 320 * 10rem。如果使用Sass可以用如下的转化代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">// rem.scss</div><div class="line">@charset &quot;utf-8&quot;;</div><div class="line">$divide: 10;</div><div class="line">$pswWidth: 320;</div><div class="line">$ppr: 320px/$divide/1rem;// 定义单位</div><div class="line"></div><div class="line">// https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/</div><div class="line">@mixin toRem($property, $values...) &#123;</div><div class="line">    $max: length($values);</div><div class="line">    $remValues: &apos;&apos;;</div><div class="line">    @for $i from 1 through $max &#123;</div><div class="line">        $value: nth($values, $i) * $divide / $pswWidth;</div><div class="line">        $remValues: #&#123;$remValues + $value&#125;rem;</div><div class="line">        @if $i &lt; $max &#123;</div><div class="line">            $remValues: #&#123;$remValues + &quot; &quot;&#125;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    #&#123;$property&#125;: $remValues;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后，在其他文件中,类似如下进行调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@import &quot;rem&quot;;</div><div class="line">.nav-list &#123;</div><div class="line">    height: 10px/$ppr;</div><div class="line">    @include toRem(margin, 10, 15, 10, 15);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>生成的CSS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.nav-list &#123;</div><div class="line">  height: 0.3125rem;</div><div class="line">  margin: 0.3125rem 0.46875rem 0.3125rem 0.46875rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
           
         
       
@@ -816,7 +958,130 @@
       
         
           
-            <h1 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h1><p>Bootstrap 是最受欢饮的 HTML CSS 和 JS 框架, 用于开发响应式布局,移动设备优先的项目.<br><a href="http://www.bootcss.com/" target="_blank" rel="external">Bootstrap 中文网</a></p>
+            <h1 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h1><ul>
+<li>简介<br>Bootstrap 是最受欢迎的 HTML CSS 和 JS 框架, 用于开发响应式布局,移动设备优先的项目.<br><a href="http://www.bootcss.com/" target="_blank" rel="external">Bootstrap 中文网</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/15/02-zepto-快速使用/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="流浪猫">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/llmaopp.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="流浪猫的 Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/15/02-zepto-快速使用/" itemprop="url">
+                  zepto-快速使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-15T23:47:33+08:00">
+                2016-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="zepto"><a href="#zepto" class="headerlink" title="zepto"></a>zepto</h1><ul>
+<li>简介<br>Zepto是一个轻量级的针对现代高级浏览器的JavaScript库， 它与jquery有着类似的api。 如果你会用jquery，那么你也会用zepto。<br>Zepto的设计目的是提供 jQuery 的类似的API，但并不是100%覆盖 jQuery 。Zepto设计的目的是有一个5-10k的通用库、下载并快速执行、有一个熟悉通用的API，所以你能把你主要的精力放到应用开发上。<br><a href="http://www.css88.com/doc/zeptojs_api/" target="_blank" rel="external">zepto 中文 api</a></li>
+</ul>
 
           
         
@@ -1404,261 +1669,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/17/01-H5视频播放器/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="流浪猫">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/llmaopp.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="流浪猫的 Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/17/01-H5视频播放器/" itemprop="url">
-                  用 H5 实现一个简单的视频播放器
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-17T23:47:33+08:00">
-                2016-01-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在实际开发中一般不会使用 video 标签自带的播放控件,因为各个浏览器对该控件的显示效果不一样,另外我们写的播放器也要跟页面的 UI 布局相协调,所以需要我们根据实际需求,对 video 元素进行视觉上的优化.</p>
-<p>以下是一个功能相对完整的 h5 播放器:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>视频播放器<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./css/font-awesome.css"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./css/player.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">figure</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>视频播放器<span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"player"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"./video/fun.mp4"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- 播放/暂停 --&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">class</span>=<span class="string">"switch fa fa-play"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- 全屏 --&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">class</span>=<span class="string">"expand fa fa-expand"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- 进度条 --&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"progress"</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"loaded"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- 时间 --&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"timer"</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"current"</span>&gt;</span>00:00:00<span class="tag">&lt;/<span class="name">span</span>&gt;</span> /</div><div class="line">                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"total"</span>&gt;</span>00:00:00<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- 声音 --&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./js/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"></div><div class="line">        // 初始化</div><div class="line">        var video = $('video')[0],</div><div class="line">            // 播放进度条</div><div class="line">            line = $('.line'),</div><div class="line">            // 当前时间</div><div class="line">            current = $('.current'),</div><div class="line">            // 时分秒</div><div class="line">            h, m, s;</div><div class="line"></div><div class="line">        // 当视频可以播放时</div><div class="line">        video.oncanplay = function () &#123;</div><div class="line">            video.style.display = 'block';</div><div class="line">            </div><div class="line">            h = Math.floor(video.duration / 3600)</div><div class="line">            m = Math.floor(video.duration / 60);</div><div class="line">            s = Math.floor(video.duration % 60);</div><div class="line"></div><div class="line">            // 小于10时拼接字符串0</div><div class="line">            h = h &lt; 10 ? '0' + h : h;</div><div class="line">            m = m &lt; 10 ? '0' + m : m;</div><div class="line">            s = s &lt; 10 ? '0' + s : s;</div><div class="line"></div><div class="line">            // 总共多少时间</div><div class="line">            $('.total').text(h + ':' + m + ':' + s);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 播放/暂停</div><div class="line">        $('.switch').on('click', function () &#123;</div><div class="line">            // 切换状态</div><div class="line">            $(this).toggleClass('fa-pause fa-play');</div><div class="line"></div><div class="line">            // 切换状态</div><div class="line">            if(video.paused) &#123;</div><div class="line">                video.play();</div><div class="line">            &#125; else &#123;</div><div class="line">                video.pause();</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        // 播放进度</div><div class="line">        video.ontimeupdate = function () &#123;</div><div class="line"></div><div class="line">            var value = 0;</div><div class="line"></div><div class="line">            if (video.currentTime &gt; 0) &#123;</div><div class="line">                value = video.currentTime / video.duration * 100;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            line.css('width', value + '%');</div><div class="line"></div><div class="line">            h = Math.floor(video.currentTime / 3600)</div><div class="line">            m = Math.floor(video.currentTime / 60);</div><div class="line">            s = Math.floor(video.currentTime % 60);</div><div class="line"></div><div class="line">            // 小于10时拼接字符串0</div><div class="line">            h = h &lt; 10 ? '0' + h : h;</div><div class="line">            m = m &lt; 10 ? '0' + m : m;</div><div class="line">            s = s &lt; 10 ? '0' + s : s;</div><div class="line"></div><div class="line">            // 时间进度</div><div class="line">            current.text(h + ':' + m + ':' + s);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 跳跃播放</div><div class="line">        $('.bar').on('click', function (ev) &#123;</div><div class="line">            video.currentTime = (ev.offsetX / $(this).width()) * video.duration;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        // 播放完毕</div><div class="line">        video.onended = function () &#123;</div><div class="line">            // 切换状态</div><div class="line">            $('.switch').removeClass('fa-pause').addClass('fa-play');</div><div class="line">            // 进度条为0</div><div class="line">            line.css('width', 0);</div><div class="line">            // 时间还原</div><div class="line">            current.text('00:00:00');</div><div class="line"></div><div class="line">            // 播放时间还原</div><div class="line">            video.currentTime = 0;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        // 全屏</div><div class="line">        $('.expand').on('click', function () &#123;</div><div class="line">            video.webkitRequestFullScreen();</div><div class="line">        &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/16/01-HTML5-多媒体/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="流浪猫">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/llmaopp.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="流浪猫的 Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="流浪猫的 Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/16/01-HTML5-多媒体/" itemprop="url">
-                  HTML5-多媒体
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-16T23:47:33+08:00">
-                2016-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h1><hr>
-<h3 id="音频-audio元素"><a href="#音频-audio元素" class="headerlink" title="音频 audio元素"></a>音频 audio元素</h3><ul>
-<li><p>audio 的使用<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"song.ogg"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">    您的浏览器不支持此音频</div><div class="line">    <span class="comment">&lt;!-- &lt;audio&gt; 与 &lt;/audio&gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的. --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>  audio 元素支持三种音频格式:Ogg Vorbis, MP3, Wav.每种格式对各个浏览器的兼容性不同.<br>  audio 元素允许多个 source 元素.<br>  source 元素可以链接不同的音频文件.<br>  浏览器将使用第一个可识别的格式.<br>  实例</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.ogg"</span> <span class="attr">type</span>=<span class="string">"audio/ogg"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.mp3"</span> <span class="attr">type</span>=<span class="string">"audio/mpeg"</span> /&gt;</span></div><div class="line">    您的浏览器不支持此音频</div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>audio 的属性<br>  | 属性 | 值 | 描述 |<br>  | —- | —- | —- |<br>  | autoplay | autoplay | 自动播放 |<br>  | controls | controls | 显示音频控件 |<br>  | loop | loop | 循环播放 |<br>  | preload | preload | 页面加载时进行加载,并预备播放,使用 autoplay 会忽视该属性 |<br>  | src | url | 音频的 url |</p>
-</li>
-</ul>
-<h3 id="视频-video-元素"><a href="#视频-video-元素" class="headerlink" title="视频 video 元素"></a>视频 video 元素</h3><ul>
-<li>video 的介绍<ul>
-<li>使用方法跟 audio 类似</li>
-<li>不同之处<br>  支持视频格式: Ogg, MPEG4, WebM.<br>  比 audio 多了 width 和 height 两个属性</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1706,7 +1716,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
